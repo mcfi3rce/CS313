@@ -1,3 +1,10 @@
 {
-  "name": "CS 313 PHP Base Code"
+    "name": "CS 313 PHP Base Code" {
+        "scripts": {
+            "test" : {
+                "success_url": "/hello.html"
+            }
+        }
+    }
 }
+
