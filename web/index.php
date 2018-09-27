@@ -70,25 +70,10 @@
         </a>
     </div> <!---- END OF SLIDER -->
     
-    <div class="container text-center">
-    <h2>My Hobbies</h2>
-        <div class="row">
-            <div class="col-sm-4">
-                <img src="img/html5.png" id"icon">
-                <h4>HTML5</h4>
-                
-            </div>
-        
-        </div>
-    
-    </div>
-    
-
 </body>
 </html>
 
 <?php
 
-  phpinfo();
 
 ?>
