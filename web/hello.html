@@ -3,18 +3,35 @@
     <head>
         <meta charset="UTF-8" >
         <title>HELLO WORLD</title>
+        <link rel="stylesheet" type="text/css" href="bold.css">
+        <script src="action.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+         <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     </head>
     <body>
-        Hello World
-        <div color="blue">
-            Hi there
-        </div>
-        <div background-color="red">
-            My name is red
-        </div>
-        <div size="32">
-            I like you
-        </div>
+        <div class= "container">
+            <h1>Bootstrapattack</h1>
+            <div class="jumbotron">
+                Hello World 
+                <div id="div1" class="div-first hover-bold" style="color:aqua" >
+                    Hi there
+                </div>
+                <div id="div2" class="div-later hover-bold" style="background-color:red">
+                    My name is red
+                </div>
+                <div id="div3" class="div-later hover-bold" style="font-family:fantasy">
+                    I like you
+                </div>
+                <button type="button" onclick="clickMe();">
+                CLICK ME
+                </button><br/>
+
+                <label for="txtColor">Color:</label> 
+                <input type="text" id="txtColor" placeholder="#cccccc"><br />
+                </div>
+            </div>
+
     </body>
 </html>
 

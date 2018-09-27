@@ -1,0 +1,23 @@
+/* bold.css */
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+.div-first {
+	background-color: #00BCD4;
+	font-size: 2em;
+}
+
+.div-later {
+	font-size: 0.7em;
+}
+
+#div2 {
+	background-color: #4DD0E1;
+}
+
+#div3 {
+	background-color: #B2EBF2;
+}
+
+.hover-bold:hover {
+	font-weight: bold;
+}
