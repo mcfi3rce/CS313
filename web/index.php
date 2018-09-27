@@ -75,20 +75,6 @@
 
 <?php
 
-    echo "Welcome," . $_COOKIE['login'] . "<br/>";
-    echo "Below you may find your TODO list :)";
-    echo "<br/><br/>To Do list:<br/><br/>";
-    getTodoItems($_COOKIE['my_id']);
-    
-    if(isset($_POST['submit_description'])){
-        addTodoItem($_COOKIE['my_id'],$_POST['description']);
-        header("Refresh:0");        
-    }
-    
-    if(isset($_POST['check_list'])){
-        foreach($_POST['check_list'] as $selected){
-            deleteTodoItem($_COOKIE['my_id'], $selected);
-        }
-        header("Refresh:0");
+    echo "Welcome,"
 
 ?>
