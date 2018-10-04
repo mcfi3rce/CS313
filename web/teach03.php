@@ -4,14 +4,14 @@
 	<title></title>
 </head>
 <body>
-	<form action="display.php" method="post">
+	<form action="display03.php" method="post">
 		<input type="text=" name="name">
 		<label>Name</label><br><br>
 		<input type="text=" name="email">
 		<label>Email</label><br><br>
 		<div>
 			<?php
-				include("dictionary.php");
+				include("dictionary03.php");
 
 				foreach ($majors as $key => $value) {
 					print("<input type='radio' value='" . $key . "' name='major'>");
@@ -31,7 +31,7 @@
 		<div>
 
 			<?php
-				// include("dictionary.php");
+				// include("dictionary03.php");
 
 				foreach ($continents as $key => $value) {
 					print("<input type='checkbox' value='" . $key . "' name='continents[]'>");
