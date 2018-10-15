@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Website Tutorial</title>
+  <title>Adam McPherson Homepage</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -29,7 +29,7 @@
             <ul class="nav navbar-nav navbar-right">
                 <li class="active"><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
-                <li><a href="#">Assignments</a></li>
+                <li><a href="teach03.php">Assignments</a></li>
             </ul>    
         </div>
         </div> 
