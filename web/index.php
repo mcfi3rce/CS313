@@ -28,8 +28,8 @@
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
                 <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="teach03.php">Assignments</a></li>
+                <li><a href="book-list.php">Books</a></li>
+                <li><a href="#">Login</a></li>
             </ul>    
         </div>
         </div> 
@@ -75,6 +75,6 @@
 
 <?php
 
-    echo "Welcome,"
+    echo "Welcome, to my site. You will find all my favorite books and feel free to add some of your own"
 
 ?>
