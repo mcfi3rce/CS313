@@ -37,7 +37,7 @@
         </div>
     </nav>
     <div class="container-fluid">
-        <?php
+<?php
 try
 {
   $dbUrl = getenv('DATABASE_URL');
@@ -60,7 +60,7 @@ catch (PDOException $ex)
   die();
 }
 
-foreach ($db->query('SELECT username, password FROM book') as $row)
+foreach ($db->query('SELECT title, author FROM book') as $row)
 {
   echo 'book: ' . $row['title'];
   echo ' author: ' . $row['author'];
