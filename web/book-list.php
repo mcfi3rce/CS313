@@ -61,7 +61,6 @@ catch (PDOException $ex)
 
 foreach ($db->query('SELECT title, author, cover_art FROM book') as $row)
 {
-    echo '<div class="row">';
     echo "<div class='image-block col-sm-2' style='background:" . "url(" . $row["cover_art"] . ") no-repeat center  top;background-size:cover;>";
     echo "<p>" . "Title: " . $row["title"] . " Author: " . $row["author"] . "</p>";
     echo '</div>';
