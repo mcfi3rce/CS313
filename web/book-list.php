@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="index.css">
     <link rel="stylesheet" type="text/css" href="book-list.css">
-    <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
@@ -68,94 +68,94 @@ foreach ($db->query('SELECT title, author, cover_art FROM book') as $row)
 }
                 
 ?>
-        <div class="image-block col-sm-2" style="background: url(http://www.prepbootstrap.com/Content/images/template/ResponsiveImageTiles/city1.jpg) no-repeat center top;background-size:cover;">
+        <div class="image-block col-sm-2" style="background: url(https://www.prepbootstrap.com/Content/images/template/ResponsiveImageTiles/city1.jpg) no-repeat center top;background-size:cover;">
             <p> Image Info </p>
         </div>
-        <div class="image-block col-sm-2" style="background: url(http://www.prepbootstrap.com/Content/images/template/ResponsiveImageTiles/city2.jpg) no-repeat center top;background-size:cover;">
+        <div class="image-block col-sm-2" style="background: url(https://www.prepbootstrap.com/Content/images/template/ResponsiveImageTiles/city2.jpg) no-repeat center top;background-size:cover;">
             <p> Image Info </p>
         </div>
-        <div class="image-block col-sm-2" style="background: url(http://www.prepbootstrap.com/Content/images/template/ResponsiveImageTiles/city3.jpg) no-repeat center top;background-size:cover;">
+        <div class="image-block col-sm-2" style="background: url(https://www.prepbootstrap.com/Content/images/template/ResponsiveImageTiles/city3.jpg) no-repeat center top;background-size:cover;">
             <p> Image Info </p>
         </div>
-        <div class="image-block col-sm-2" style="background: url(http://www.prepbootstrap.com/Content/images/template/ResponsiveImageTiles/city4.jpg) no-repeat center top;background-size:cover;">
+        <div class="image-block col-sm-2" style="background: url(https://www.prepbootstrap.com/Content/images/template/ResponsiveImageTiles/city4.jpg) no-repeat center top;background-size:cover;">
             <p> Image Info </p>
         </div>
-        <div class="image-block col-sm-2" style="background: url(http://www.prepbootstrap.com/Content/images/template/ResponsiveImageTiles/city5.jpg) no-repeat center top;background-size:cover;">
+        <div class="image-block col-sm-2" style="background: url(https://www.prepbootstrap.com/Content/images/template/ResponsiveImageTiles/city5.jpg) no-repeat center top;background-size:cover;">
             <p> Image Info </p>
         </div>
-        <div class="image-block col-sm-2" style="background: url(http://www.prepbootstrap.com/Content/images/template/ResponsiveImageTiles/city6.jpg) no-repeat center top;background-size:cover;">
+        <div class="image-block col-sm-2" style="background: url(https://www.prepbootstrap.com/Content/images/template/ResponsiveImageTiles/city6.jpg) no-repeat center top;background-size:cover;">
             <p> Image Info </p>
         </div>
-        <div class="image-block col-sm-2" style="background: url(http://www.prepbootstrap.com/Content/images/template/ResponsiveImageTiles/city7.jpg) no-repeat center top;background-size:cover;">
+        <div class="image-block col-sm-2" style="background: url(https://www.prepbootstrap.com/Content/images/template/ResponsiveImageTiles/city7.jpg) no-repeat center top;background-size:cover;">
             <p> Image Info </p>
         </div>
-            <div class="image-block col-sm-2" style="background: url(http://www.prepbootstrap.com/Content/images/template/ResponsiveImageTiles/city1.jpg) no-repeat center top;background-size:cover;">
+            <div class="image-block col-sm-2" style="background: url(https://www.prepbootstrap.com/Content/images/template/ResponsiveImageTiles/city1.jpg) no-repeat center top;background-size:cover;">
             <p> Image Info </p>
         </div>
-        <div class="image-block col-sm-2" style="background: url(http://www.prepbootstrap.com/Content/images/template/ResponsiveImageTiles/city2.jpg) no-repeat center top;background-size:cover;">
+        <div class="image-block col-sm-2" style="background: url(https://www.prepbootstrap.com/Content/images/template/ResponsiveImageTiles/city2.jpg) no-repeat center top;background-size:cover;">
             <p> Image Info </p>
         </div>
-        <div class="image-block col-sm-2" style="background: url(http://www.prepbootstrap.com/Content/images/template/ResponsiveImageTiles/city3.jpg) no-repeat center top;background-size:cover;">
+        <div class="image-block col-sm-2" style="background: url(https://www.prepbootstrap.com/Content/images/template/ResponsiveImageTiles/city3.jpg) no-repeat center top;background-size:cover;">
             <p> Image Info </p>
         </div>
-        <div class="image-block col-sm-2" style="background: url(http://www.prepbootstrap.com/Content/images/template/ResponsiveImageTiles/city4.jpg) no-repeat center top;background-size:cover;">
+        <div class="image-block col-sm-2" style="background: url(https://www.prepbootstrap.com/Content/images/template/ResponsiveImageTiles/city4.jpg) no-repeat center top;background-size:cover;">
             <p> Image Info </p>
         </div>
-        <div class="image-block col-sm-2" style="background: url(http://www.prepbootstrap.com/Content/images/template/ResponsiveImageTiles/city5.jpg) no-repeat center top;background-size:cover;">
+        <div class="image-block col-sm-2" style="background: url(https://www.prepbootstrap.com/Content/images/template/ResponsiveImageTiles/city5.jpg) no-repeat center top;background-size:cover;">
             <p> Image Info </p>
         </div>
-        <div class="image-block col-sm-2" style="background: url(http://www.prepbootstrap.com/Content/images/template/ResponsiveImageTiles/city6.jpg) no-repeat center top;background-size:cover;">
+        <div class="image-block col-sm-2" style="background: url(https://www.prepbootstrap.com/Content/images/template/ResponsiveImageTiles/city6.jpg) no-repeat center top;background-size:cover;">
             <p> Image Info </p>
         </div>
-        <div class="image-block col-sm-2" style="background: url(http://www.prepbootstrap.com/Content/images/template/ResponsiveImageTiles/city7.jpg) no-repeat center top;background-size:cover;">
+        <div class="image-block col-sm-2" style="background: url(https://www.prepbootstrap.com/Content/images/template/ResponsiveImageTiles/city7.jpg) no-repeat center top;background-size:cover;">
             <p> Image Info </p>
         </div>
-            <div class="image-block col-sm-2" style="background: url(http://www.prepbootstrap.com/Content/images/template/ResponsiveImageTiles/city1.jpg) no-repeat center top;background-size:cover;">
+            <div class="image-block col-sm-2" style="background: url(https://www.prepbootstrap.com/Content/images/template/ResponsiveImageTiles/city1.jpg) no-repeat center top;background-size:cover;">
             <p> Image Info </p>
         </div>
-        <div class="image-block col-sm-2" style="background: url(http://www.prepbootstrap.com/Content/images/template/ResponsiveImageTiles/city2.jpg) no-repeat center top;background-size:cover;">
+        <div class="image-block col-sm-2" style="background: url(https://www.prepbootstrap.com/Content/images/template/ResponsiveImageTiles/city2.jpg) no-repeat center top;background-size:cover;">
             <p> Image Info </p>
         </div>
-        <div class="image-block col-sm-2" style="background: url(http://www.prepbootstrap.com/Content/images/template/ResponsiveImageTiles/city3.jpg) no-repeat center top;background-size:cover;">
+        <div class="image-block col-sm-2" style="background: url(https://www.prepbootstrap.com/Content/images/template/ResponsiveImageTiles/city3.jpg) no-repeat center top;background-size:cover;">
             <p> Image Info </p>
         </div>
-        <div class="image-block col-sm-2" style="background: url(http://www.prepbootstrap.com/Content/images/template/ResponsiveImageTiles/city4.jpg) no-repeat center top;background-size:cover;">
+        <div class="image-block col-sm-2" style="background: url(https://www.prepbootstrap.com/Content/images/template/ResponsiveImageTiles/city4.jpg) no-repeat center top;background-size:cover;">
             <p> Image Info </p>
         </div>
-        <div class="image-block col-sm-2" style="background: url(http://www.prepbootstrap.com/Content/images/template/ResponsiveImageTiles/city5.jpg) no-repeat center top;background-size:cover;">
+        <div class="image-block col-sm-2" style="background: url(https://www.prepbootstrap.com/Content/images/template/ResponsiveImageTiles/city5.jpg) no-repeat center top;background-size:cover;">
             <p> Image Info </p>
         </div>
-        <div class="image-block col-sm-2" style="background: url(http://www.prepbootstrap.com/Content/images/template/ResponsiveImageTiles/city6.jpg) no-repeat center top;background-size:cover;">
+        <div class="image-block col-sm-2" style="background: url(https://www.prepbootstrap.com/Content/images/template/ResponsiveImageTiles/city6.jpg) no-repeat center top;background-size:cover;">
             <p> Image Info </p>
         </div>
-        <div class="image-block col-sm-2" style="background: url(http://www.prepbootstrap.com/Content/images/template/ResponsiveImageTiles/city7.jpg) no-repeat center top;background-size:cover;">
+        <div class="image-block col-sm-2" style="background: url(https://www.prepbootstrap.com/Content/images/template/ResponsiveImageTiles/city7.jpg) no-repeat center top;background-size:cover;">
             <p> Image Info </p>
         </div>
-            <div class="image-block col-sm-2" style="background: url(http://www.prepbootstrap.com/Content/images/template/ResponsiveImageTiles/city1.jpg) no-repeat center top;background-size:cover;">
+            <div class="image-block col-sm-2" style="background: url(https://www.prepbootstrap.com/Content/images/template/ResponsiveImageTiles/city1.jpg) no-repeat center top;background-size:cover;">
             <p> Image Info </p>
         </div>
-        <div class="image-block col-sm-2" style="background: url(http://www.prepbootstrap.com/Content/images/template/ResponsiveImageTiles/city2.jpg) no-repeat center top;background-size:cover;">
+        <div class="image-block col-sm-2" style="background: url(https://www.prepbootstrap.com/Content/images/template/ResponsiveImageTiles/city2.jpg) no-repeat center top;background-size:cover;">
             <p> Image Info </p>
         </div>
-        <div class="image-block col-sm-2" style="background: url(http://www.prepbootstrap.com/Content/images/template/ResponsiveImageTiles/city3.jpg) no-repeat center top;background-size:cover;">
+        <div class="image-block col-sm-2" style="background: url(https://www.prepbootstrap.com/Content/images/template/ResponsiveImageTiles/city3.jpg) no-repeat center top;background-size:cover;">
             <p> Image Info </p>
         </div>
-        <div class="image-block col-sm-2" style="background: url(http://www.prepbootstrap.com/Content/images/template/ResponsiveImageTiles/city4.jpg) no-repeat center top;background-size:cover;">
+        <div class="image-block col-sm-2" style="background: url(https://www.prepbootstrap.com/Content/images/template/ResponsiveImageTiles/city4.jpg) no-repeat center top;background-size:cover;">
             <p> Image Info </p>
         </div>
-        <div class="image-block col-sm-2" style="background: url(http://www.prepbootstrap.com/Content/images/template/ResponsiveImageTiles/city5.jpg) no-repeat center top;background-size:cover;">
+        <div class="image-block col-sm-2" style="background: url(https://www.prepbootstrap.com/Content/images/template/ResponsiveImageTiles/city5.jpg) no-repeat center top;background-size:cover;">
             <p> Image Info </p>
         </div>
-        <div class="image-block col-sm-2" style="background: url(http://www.prepbootstrap.com/Content/images/template/ResponsiveImageTiles/city6.jpg) no-repeat center top;background-size:cover;">
+        <div class="image-block col-sm-2" style="background: url(https://www.prepbootstrap.com/Content/images/template/ResponsiveImageTiles/city6.jpg) no-repeat center top;background-size:cover;">
             <p> Image Info </p>
         </div>
-        <div class="image-block col-sm-2" style="background: url(http://www.prepbootstrap.com/Content/images/template/ResponsiveImageTiles/city7.jpg) no-repeat center top;background-size:cover;">
+        <div class="image-block col-sm-2" style="background: url(https://www.prepbootstrap.com/Content/images/template/ResponsiveImageTiles/city7.jpg) no-repeat center top;background-size:cover;">
             <p> Image Info </p>
         </div>
-         <div class="image-block col-sm-2" style="background: url(http://www.prepbootstrap.com/Content/images/template/ResponsiveImageTiles/city6.jpg) no-repeat center top;background-size:cover;">
+         <div class="image-block col-sm-2" style="background: url(https://www.prepbootstrap.com/Content/images/template/ResponsiveImageTiles/city6.jpg) no-repeat center top;background-size:cover;">
             <p> Image Info </p>
         </div>
-        <div class="image-block col-sm-2" style="background: url(http://www.prepbootstrap.com/Content/images/template/ResponsiveImageTiles/city7.jpg) no-repeat center top;background-size:cover;">
+        <div class="image-block col-sm-2" style="background: url(https://www.prepbootstrap.com/Content/images/template/ResponsiveImageTiles/city7.jpg) no-repeat center top;background-size:cover;">
             <p> Image Info </p>
         </div>
     </div>
