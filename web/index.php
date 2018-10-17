@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="index.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
@@ -29,7 +29,7 @@
             <ul class="nav navbar-nav navbar-right">
                 <li class="active"><a href="#">Home</a></li>
                 <li><a href="book-list.php">Books</a></li>
-                <li><a href="#">Login</a></li>
+                <li><a href="login.php">Login</a></li>
             </ul>    
         </div>
         </div> 
@@ -45,9 +45,9 @@
             <div class="item active">
             <img src="img/mountains.png">
                 <div class="carousel-caption">
-                    <h1>get to know me</h1>
+                    <h1>Books and Mountains</h1>
                     <br>
-                    <button type="button" class="btn btn-default">
+                    <button type="submit" onClick="location.href='login.php'" class="btn btn-default">
                     Get Started
                     </button>
                 </div>
@@ -75,6 +75,5 @@
 
 <?php
 
-    echo "Welcome, to my site. You will find all my favorite books and feel free to add some of your own"
-
+    echo "This is where your books will show once you add some"
 ?>

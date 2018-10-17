@@ -1,3 +1,10 @@
+/*=== 1. General Structure ===*/
+html,
+body {
+    font-family: 'Varela Round';
+    background: #efefef;
+}
+
 .navbar {
     margin-bottom: 0;
     border-radius: 0;
