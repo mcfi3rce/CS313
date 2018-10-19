@@ -30,7 +30,15 @@
                 <li><a href="index.php">Home</a></li>
                 <li class="active"><a href="#">Books</a></li>
                 <li><a href="login.php">Login</a></li>
-            </ul>    
+            </ul>
+            <form class="navbar-form">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-danger">
+                Submit
+                </button>
+            </form>
         </div>
         </div> 
     </nav>
