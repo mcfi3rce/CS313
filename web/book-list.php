@@ -34,7 +34,7 @@
         </div>
         </div> 
     </nav>
-    
+<div class="container-fluid">
     <!-- Add search bar here -->
 
     <form class="navbar-form">
@@ -45,7 +45,6 @@
                 Submit
                 </button>
     </form>
-<div class="container-fluid">
     <div class="row">        <?php
 try
 {
