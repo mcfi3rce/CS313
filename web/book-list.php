@@ -34,9 +34,14 @@
         </div>
         </div> 
     </nav>
-    <div class="container-fluid">
-        <div class="row">
-        <?php
+    
+<!-- Search form -->
+<form class="form-inline md-form form-sm mt-0">
+    <i class="fa fa-search" aria-hidden="true"></i>
+    <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search" aria-label="Search">
+</form>
+<div class="container-fluid">
+    <div class="row">        <?php
 try
 {
   $dbUrl = getenv('DATABASE_URL');
