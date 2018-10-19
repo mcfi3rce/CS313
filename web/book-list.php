@@ -26,25 +26,23 @@
 
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-left">
                 <li><a href="index.php">Home</a></li>
                 <li class="active"><a href="#">Books</a></li>
                 <li><a href="login.php">Login</a></li>
             </ul>
-        </div>
-        </div> 
-    </nav>
-<div class="container-fluid">
-    <!-- Add search bar here -->
-
-    <form class="navbar-form">
+            <form class="navbar-form navbar-right">
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="Search">
                 </div>
                 <button type="submit" class="btn btn-danger">
                 Submit
                 </button>
-    </form>
+            </form>
+        </div>
+        </div> 
+    </nav>
+<div class="container-fluid">
     <div class="row">        <?php
 try
 {
