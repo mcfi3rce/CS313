@@ -33,7 +33,7 @@
             </ul>
             <form class="navbar-form navbar-right">
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search">
+                    <input type="text" name="search" class="form-control" placeholder="Search">
                 </div>
                 <button type="submit" class="btn btn-danger">
                 Submit
@@ -43,40 +43,42 @@
         </div> 
     </nav>
 <div class="container-fluid">
-    <div class="row">        <?php
-try
-{
-  $dbUrl = getenv('DATABASE_URL');
+    <div class="row">        
+    <?php
+        echo $_POST['search'];
+    try
+    {
+      $dbUrl = getenv('DATABASE_URL');
 
-  $dbOpts = parse_url($dbUrl);
+      $dbOpts = parse_url($dbUrl);
 
-  $dbHost = $dbOpts["host"];
-  $dbPort = $dbOpts["port"];
-  $dbUser = $dbOpts["user"];
-  $dbPassword = $dbOpts["pass"];
-  $dbName = ltrim($dbOpts["path"],'/');
+      $dbHost = $dbOpts["host"];
+      $dbPort = $dbOpts["port"];
+      $dbUser = $dbOpts["user"];
+      $dbPassword = $dbOpts["pass"];
+      $dbName = ltrim($dbOpts["path"],'/');
 
-  $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+      $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
 
-  $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-}
-catch (PDOException $ex)
-{
-  echo 'Error!: ' . $ex->getMessage();
-  die();
-}
+      $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    }
+    catch (PDOException $ex)
+    {
+      echo 'Error!: ' . $ex->getMessage();
+      die();
+    }
+    
+    for ($i = 1; $i <= 32; $i++) {
+    foreach ($db->query('SELECT title, author, cover_art FROM book') as $row)
+    {
+        echo "<div class='image-block col-sm-2' style='background:" . "url(" . $row["cover_art"] . ") no-repeat center  top;background-size:cover;'>";
+        echo "<p>" . "Title: " . $row["title"] . " Author: " . $row["author"] . "</p>";
+        echo '</div>';
+    }
 
-for ($i = 1; $i <= 32; $i++) {
-foreach ($db->query('SELECT title, author, cover_art FROM book') as $row)
-{
-    echo "<div class='image-block col-sm-2' style='background:" . "url(" . $row["cover_art"] . ") no-repeat center  top;background-size:cover;'>";
-    echo "<p>" . "Title: " . $row["title"] . " Author: " . $row["author"] . "</p>";
-    echo '</div>';
-}
- 
-}
-                
-?>
+    }
+
+    ?>
     </div>      
 </div>
         
