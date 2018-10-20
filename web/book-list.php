@@ -69,7 +69,7 @@
     
     if (isset($_POST['search'])){
         echo "POST: "  . $_POST['search'] . "</br>";
-        foreach ($db->query("SELECT title, author, cover_art FROM book WHERE book like '%" . htmlspecialchars($_POST['search']) . "%'") as $row)
+        foreach ($db->query("SELECT title, author, cover_art FROM book WHERE title like '%" . htmlspecialchars($_POST['search']) . "%'") as $row)
             {
                 echo "<div class='image-block col-sm-2' style='background:" . "url(" . $row["cover_art"] . ") no-repeat center  top;background-size:cover;'>";
                 echo "<p>" . "Title: " . $row["title"] . " Author: " . $row["author"] . "</p>";
