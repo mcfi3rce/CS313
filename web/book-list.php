@@ -67,18 +67,23 @@
       die();
     }
     
-        if (isset($_POST['search'])){
-            echo "Search term: " . $_POST['search'] . "</br>";
-        }
-    
-    for ($i = 1; $i <= 32; $i++) {
-    foreach ($db->query('SELECT title, author, cover_art FROM book') as $row)
-    {
-        echo "<div class='image-block col-sm-2' style='background:" . "url(" . $row["cover_art"] . ") no-repeat center  top;background-size:cover;'>";
-        echo "<p>" . "Title: " . $row["title"] . " Author: " . $row["author"] . "</p>";
-        echo '</div>';
+    if (isset($_POST['search'])){
+        foreach ($db->query("SELECT title, author, cover_art FROM bookwhere book like '%" . htmlspecialchars($_POST['search']) . "%'") as $row)
+            {
+                echo "<div class='image-block col-sm-2' style='background:" . "url(" . $row["cover_art"] . ") no-repeat center  top;background-size:cover;'>";
+                echo "<p>" . "Title: " . $row["title"] . " Author: " . $row["author"] . "</p>";
+                echo '</div>';
+            }
     }
-
+    else {
+        for ($i = 1; $i <= 32; $i++) {
+            foreach ($db->query('SELECT title, author, cover_art FROM book') as $row)
+            {
+                echo "<div class='image-block col-sm-2' style='background:" . "url(" . $row["cover_art"] . ") no-repeat center  top;background-size:cover;'>";
+                echo "<p>" . "Title: " . $row["title"] . " Author: " . $row["author"] . "</p>";
+                echo '</div>';
+            }
+        }
     }
 
     ?>
