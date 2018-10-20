@@ -31,7 +31,7 @@
                 <li class="active"><a href="#">Books</a></li>
                 <li><a href="login.php">Login</a></li>
             </ul>
-            <form class="navbar-form navbar-right">
+            <form class="navbar-form navbar-right" method="post" action="">
                 <div class="form-group">
                     <input type="text" name="search" class="form-control" placeholder="Search">
                 </div>
@@ -45,7 +45,6 @@
 <div class="container-fluid">
     <div class="row">        
     <?php
-        echo $_POST['search'];
     try
     {
       $dbUrl = getenv('DATABASE_URL');
@@ -67,6 +66,10 @@
       echo 'Error!: ' . $ex->getMessage();
       die();
     }
+    
+        if (isset($_POST['search'])){
+            echo "Search term: " . $_POST['search'] . "</br>";
+        }
     
     for ($i = 1; $i <= 32; $i++) {
     foreach ($db->query('SELECT title, author, cover_art FROM book') as $row)
