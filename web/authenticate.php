@@ -21,7 +21,7 @@ $statement->execute();
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
     if ($row['username'] == $_POST['lg_username'] && 
-        $row['password'] == $_POST['lg_password']))
+        $row['password'] == $_POST['lg_password'])
         echo "LOGGED IN";
     else
         echo "INVALID PASSWORD";
