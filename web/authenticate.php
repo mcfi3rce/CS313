@@ -17,12 +17,12 @@ $db = get_db();
 */
 if (isset($_POST['lg_username'])){
     
-    $statement = $db->prepare("SELECT id, username, password FROM public.users WHERE username = " . $_POST['username']) . "AND password = " . $_POST['password'];
+    $statement = $db->prepare("SELECT id, username, password FROM public.users WHERE username = " . $_POST['lg_username']) . "AND password = " . $_POST['lg_password'];
     $statement->execute();
     while ($row = $statement->fetch(PDO::FETCH_ASSOC))
     {
-        if ($row['username'] == $_POST['username'] && 
-            $row['password'] == $_POST['password'])
+        if ($row['username'] == $_POST['lg_username'] && 
+            $row['password'] == $_POST['lg_password'])
         {
             echo "LOGGED IN";   
         }
