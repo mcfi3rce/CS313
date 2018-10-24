@@ -33,7 +33,7 @@ if (isset($_POST['lg_username'])){
     }
 }
 else{
-    echo "POST DIDN'T WORK";
+    echo $_POST['lg_username'];
 }
     
 
