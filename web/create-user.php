@@ -16,12 +16,10 @@ $db = get_db();
 */
 try{
     // Get the Data from the POST
-    $username = $_POST['rg_username'];
-    $password = $_POST['rg_password'];
-    $email = $_POST['rg_password'];
-    $displayName = $_POST['rg_password'];
-    
-    
+    $username = $_POST['reg_username'];
+    $password = $_POST['reg_password'];
+    $email = $_POST['reg_email'];
+    $displayName = $_POST['reg_displayname'];
     
     echo "username= $username </br>";
     echo "password= $password </br>";
