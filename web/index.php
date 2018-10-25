@@ -36,7 +36,7 @@ echo session_status();
                 <li><a href="login.php">Login</a></li>
                 <?php
                 if (session_status() == 2){
-                echo '<li><a href="logout.php">Logout</a></li>'
+                echo '<li><a href="logout.php">Logout</a></li>';
                 }
                     
                 ?>
