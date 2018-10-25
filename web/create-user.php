@@ -23,8 +23,6 @@ try{
     
     
     
-    
-
     echo "username= $username </br>";
     echo "password= $password </br>";
 
@@ -54,7 +52,7 @@ catch (Exception $ex)
 	die();
 }
 
-header("Location: login.php");
-die();
+#header("Location: login.php");
+#die();
 
 ?>
