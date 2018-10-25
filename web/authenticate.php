@@ -16,7 +16,7 @@ $db = get_db();
 * SELECT id, username, password FROM user WHERE username = 
 */
 if (isset($_POST['lg_username'])){
-    echo "SELECT id, username, password FROM public.user WHERE username = " . $_POST['lg_username'] . " AND password = " . $_POST['lg_password'];
+    echo "SELECT id, username, password FROM user WHERE username = '" . $_POST['lg_username'] . "' AND password = '" . $_POST['lg_password']"'";
     
     $statement = $db->prepare("SELECT id, username, password FROM user WHERE username = '" . $_POST['lg_username'] . "' AND password = '" . $_POST['lg_password']"'");
     $statement->execute();
