@@ -17,7 +17,7 @@ $db = get_db();
 */
 echo "HERE1";
 if (isset($_POST['lg_username'])){
-    echo "HERE2";
+    echo "HERE2" . $_POST['lg_username'];
     $statement = $db->prepare("SELECT id, username, password FROM public.users WHERE username = " . $_POST['lg_username']) . " AND password = " . $_POST['lg_password'];
     $statement->execute();
     while ($row = $statement->fetch(PDO::FETCH_ASSOC))
