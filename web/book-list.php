@@ -36,7 +36,11 @@ $db = get_db();
                 <li><a href="index.php">Home</a></li>
                 <li class="active"><a href="#">Books</a></li>
                 <li><a href="login.php">Login</a></li>
-                <li><a href="logout.php">Logout</a></li>
+                <?php
+                if (session_status() == 2){
+                echo '<li><a href="logout.php">Logout</a></li>';
+                }
+                ?>
             </ul>
             <form class="navbar-form navbar-right" method="post" action="">
                 <div class="form-group">

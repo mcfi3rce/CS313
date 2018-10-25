@@ -1,6 +1,6 @@
 <?php
-session_start();
-echo session_status();
+if (session_status() == 1)
+    header("Location: login.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -38,7 +38,6 @@ echo session_status();
                 if (session_status() == 2){
                 echo '<li><a href="logout.php">Logout</a></li>';
                 }
-                    
                 ?>
             </ul>    
         </div>
