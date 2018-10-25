@@ -8,8 +8,8 @@
 * shelves to put books on as well as adding books to the database.
 ***********************************************************/
 
-require("dbConnect.php");
-$db = get_db();
+#require("dbConnect.php");
+#$db = get_db();
 
 /***********************************************************
 * This is the query that I would like to run
@@ -33,7 +33,8 @@ if (isset($_POST['lg_username'])){
     }
 }
 else{
-    echo $_POST['lg_username'];
+    
+    echo "DIDN'T WORK";
 }
     
 
