@@ -31,13 +31,19 @@ try{
 
         $statement->bindValue(':username', $username);
         $statement->bindValue(':password', $password);
-        echo "$query";
         $statement->execute();
-        echo "EXECUTED";
+        
+        if ($row = $statement->fetch(PDO::FETCH_ASSOC)){
+            echo "AUTHENTICATED";
+        }
+        else
+        {
+            echo "INVALID"
+        }
+            
+        /**
         while ($row = $statement->fetch(PDO::FETCH_ASSOC))
         {
-            echo "WHILE";
-
             if ($row['username'] == $_POST['lg_username'] && 
                 $row['password'] == $_POST['lg_password'])
             {
@@ -47,7 +53,7 @@ try{
             {
                 echo "INVALID PASSWORD";   
             }
-        }
+        }**/
     } 
     else {
 
