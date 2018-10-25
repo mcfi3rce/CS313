@@ -28,7 +28,7 @@ try{
 
     if (isset($_POST['reg_username'])){
         
-        $query = 'INSERT INTO user(username, password, email, display_name) VALUES (:username, :password, :email, :displayName)';
+        $query = 'INSERT INTO public.user(username, password, email, display_name) VALUES (:username, :password, :email, :displayName)';
         $statement = $db->prepare($query);
 
         $statement->bindValue(':username', $username);
