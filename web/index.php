@@ -1,8 +1,5 @@
 <?php
-echo session_status();
 session_start();
-echo session_status();
-session_destroy();
 echo session_status();
 ?>
 <!DOCTYPE html>
@@ -37,6 +34,12 @@ echo session_status();
                 <li class="active"><a href="#">Home</a></li>
                 <li><a href="book-list.php">Books</a></li>
                 <li><a href="login.php">Login</a></li>
+                <?php
+                if (session_status() == 2){
+                echo '<li><a href="logout.php">Logout</a></li>'
+                }
+                    
+                ?>
             </ul>    
         </div>
         </div> 
