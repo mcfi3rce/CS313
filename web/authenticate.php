@@ -15,42 +15,50 @@ $db = get_db();
 * This is the query that I would like to run
 * SELECT id, username, password FROM user WHERE username = 
 */
+try{
+    // Get the Data from the POST
+    $username = $_POST['lg_username'];
+    $password = $_POST['lg_password'];
 
-// Get the Data from the POST
-$username = $_POST['lg_username'];
-$password = $_POST['lg_password'];
-
-echo "username= $username </br>";
-echo "password= $password </br>";
+    echo "username= $username </br>";
+    echo "password= $password </br>";
 
 
-if (isset($_POST['lg_username'])){
-    echo "SET";
-    $query = 'SELECT id, username, password FROM public.user WHERE username = :username AND password = :password';
-    $statement = $db->prepare($query);
-    
-    $statement->bindValue(':username', $username);
-	$statement->bindValue(':password', $password);
-    echo "$query";
-    $statement->execute();
-    echo "EXECUTED";
-    while ($row = $statement->fetch(PDO::FETCH_ASSOC))
-    {
-        echo "WHILE";
-        
-        if ($row['username'] == $_POST['lg_username'] && 
-            $row['password'] == $_POST['lg_password'])
+    if (isset($_POST['lg_username'])){
+        echo "SET";
+        $query = 'SELECT id, username, password FROM public.user WHERE username = :username AND password = :password';
+        $statement = $db->prepare($query);
+
+        $statement->bindValue(':username', $username);
+        $statement->bindValue(':password', $password);
+        echo "$query";
+        $statement->execute();
+        echo "EXECUTED";
+        while ($row = $statement->fetch(PDO::FETCH_ASSOC))
         {
-            echo "LOGGED IN";   
+            echo "WHILE";
+
+            if ($row['username'] == $_POST['lg_username'] && 
+                $row['password'] == $_POST['lg_password'])
+            {
+                echo "LOGGED IN";   
+            }
+            else
+            {
+                echo "INVALID PASSWORD";   
+            }
         }
-        else
-        {
-            echo "INVALID PASSWORD";   
-        }
+    } 
+    else {
+
+        echo "DIDN'T WORK";
     }
-} 
-else {
-    
-    echo "DIDN'T WORK";
+}
+catch (Exception $ex)
+{
+	// Please be aware that you don't want to output the Exception message in
+	// a production environment
+	echo "Error with DB. Details: $ex";
+	die();
 }
     
