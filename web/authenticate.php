@@ -34,7 +34,7 @@ try{
         $statement->execute();
         
         if ($row = $statement->fetch(PDO::FETCH_ASSOC)){
-            header("Location: book-list.php")
+            header("Location: book-list.php");
         }
         else
         {
