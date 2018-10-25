@@ -20,8 +20,8 @@ $db = get_db();
 $username = $_POST['lg_username'];
 $password = $_POST['lg_password'];
 
-echo "username=$username\n";
-echo "password=$password\n";
+echo "username= $username </br>";
+echo "password= $password </br>";
 
     
 if (isset($_POST['lg_username'])){
