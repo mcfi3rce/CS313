@@ -15,8 +15,9 @@ $db = get_db();
 * This is the query that I would like to run
 * SELECT id, username, password FROM users WHERE username = 
 */
+echo "HERE1";
 if (isset($_POST['lg_username'])){
-    
+    echo "HERE2";
     $statement = $db->prepare("SELECT id, username, password FROM public.users WHERE username = " . $_POST['lg_username']) . " AND password = " . $_POST['lg_password'];
     $statement->execute();
     while ($row = $statement->fetch(PDO::FETCH_ASSOC))
