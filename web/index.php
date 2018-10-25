@@ -1,6 +1,8 @@
 <?php
+echo session_status();
 if (session_status() == 1)
-    header("Location: login.php");
+    echo $_SESSION['user_id'];
+    #header("Location: login.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">

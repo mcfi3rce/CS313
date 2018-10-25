@@ -37,7 +37,7 @@ try{
             session_start();
             echo $row['id'];
             $_SESSION['user_id'] = $row['id'];
-            #header("Location: index.php");
+            header("Location: index.php");
         }
         else
         {
