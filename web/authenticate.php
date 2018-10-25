@@ -26,12 +26,12 @@ echo "password= $password </br>";
 
 if (isset($_POST['lg_username'])){
     echo "SET";
-    $query = 'SELECT id, username, password FROM user WHERE username = :username AND password = :password';
+    $query = 'SELECT id, username, password FROM public.user WHERE username = :username AND password = :password';
     $statement = $db->prepare($query);
     
     $statement->bindValue(':username', $username);
 	$statement->bindValue(':password', $password);
-    echo "EXECUTE";
+    echo "$query";
     $statement->execute();
     echo "EXECUTED";
     while ($row = $statement->fetch(PDO::FETCH_ASSOC))
