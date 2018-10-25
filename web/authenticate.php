@@ -38,7 +38,7 @@ try{
         }
         else
         {
-            echo "INVALID"
+            echo "INVALID";
         }
             
         /**
