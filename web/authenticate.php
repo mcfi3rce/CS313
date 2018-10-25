@@ -20,8 +20,11 @@ if (isset($_POST['lg_username'])){
     
     $statement = $db->prepare("SELECT id, username, password FROM user WHERE username = " . $_POST['lg_username'] . " AND password = " . $_POST['lg_password']);
     $statement->execute();
+    echo "EXECUTE";
     while ($row = $statement->fetch(PDO::FETCH_ASSOC))
     {
+        echo "WHILE";
+        
         if ($row['username'] == $_POST['lg_username'] && 
             $row['password'] == $_POST['lg_password'])
         {
