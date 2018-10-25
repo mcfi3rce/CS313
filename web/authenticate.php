@@ -31,10 +31,9 @@ if (isset($_POST['lg_username'])){
     
     $statement->bindValue(':username', $username);
 	$statement->bindValue(':password', $password);
-
-    $statement->execute();
     echo "EXECUTE";
-    /**
+    $statement->execute();
+    echo "EXECUTED";
     while ($row = $statement->fetch(PDO::FETCH_ASSOC))
     {
         echo "WHILE";
@@ -49,11 +48,9 @@ if (isset($_POST['lg_username'])){
             echo "INVALID PASSWORD";   
         }
     }
-}
-else{
+} 
+else {
     
     echo "DIDN'T WORK";
 }
     
-**/
-?>
