@@ -23,7 +23,7 @@ $password = $_POST['lg_password'];
 echo "username= $username </br>";
 echo "password= $password </br>";
 
-    
+/**    
 if (isset($_POST['lg_username'])){
     
     $query = 'SELECT id, username, password FROM user WHERE username = :username AND password = :password';
@@ -54,5 +54,5 @@ else{
     echo "DIDN'T WORK";
 }
     
-
+**/
 ?>
