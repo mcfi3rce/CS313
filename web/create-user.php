@@ -25,7 +25,7 @@ try{
     echo "password= $password </br>";
 
 
-    if (isset($_POST['rg_username'])){
+    if (isset($_POST['reg_username'])){
         
         $query = 'INSERT INTO user(username, password, email, display_name) VALUES (:username, :password, :email, :displayName)';
         $statement = $db->prepare($query);
