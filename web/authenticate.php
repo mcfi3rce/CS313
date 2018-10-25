@@ -34,9 +34,9 @@ try{
         $statement->execute();
         
         if ($row = $statement->fetch(PDO::FETCH_ASSOC)){
-            header("Location: index.php");
             session_start();
             $_SESSION['user_id'] = $row['id'];
+            header("Location: index.php");
         }
         else
         {
