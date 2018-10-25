@@ -20,11 +20,6 @@ try{
     $password = $_POST['reg_password'];
     $email = $_POST['reg_email'];
     $displayName = $_POST['reg_displayname'];
-    
-    echo "username= $username </br>";
-    echo "password= $password </br>";
-    echo "email= $email </br>";
-    echo "displayName= $displayName </br>";
 
     if (isset($_POST['reg_username'])){
         
@@ -51,7 +46,7 @@ catch (Exception $ex)
 	die();
 }
 
-#header("Location: login.php");
-#die();
+header("Location: login.php");
+die();
 
 ?>
