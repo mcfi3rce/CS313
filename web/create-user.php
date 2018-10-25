@@ -16,10 +16,10 @@ $db = get_db();
 */
 try{
     // Get the Data from the POST
-    $username = $_POST['lg_username'];
-    $password = $_POST['lg_password'];
-    $email = $_POST['lg_password'];
-    $displayName = $_POST['lg_password'];
+    $username = $_POST['rg_username'];
+    $password = $_POST['rg_password'];
+    $email = $_POST['rg_password'];
+    $displayName = $_POST['rg_password'];
     
     
     
@@ -29,23 +29,17 @@ try{
     echo "password= $password </br>";
 
 
-    if (isset($_POST['lg_username'])){
-        echo "SET";
-        $query = 'SELECT id, username, password FROM public.user WHERE username = :username AND password = :password';
+    if (isset($_POST['rg_username'])){
+        
+        $query = 'INSERT INTO user(username, password, email, display_name) VALUES (:username, :password, :email, :displayName)';
         $statement = $db->prepare($query);
 
         $statement->bindValue(':username', $username);
         $statement->bindValue(':password', $password);
-        $statement->execute();
+        $statement->bindValue(':email', $email);
+        $statement->bindValue(':displayName', $displayName);
         
-        if ($row = $statement->fetch(PDO::FETCH_ASSOC)){
-            header("Location: book-list.php");
-        }
-        else
-        {
-            header("Location: login.php");
-        }
-            
+        $statement->execute();    
     } 
     else {
 
@@ -59,4 +53,8 @@ catch (Exception $ex)
 	echo "Error with DB. Details: $ex";
 	die();
 }
-    
+
+header("Location: login.php");
+die();
+
+?>

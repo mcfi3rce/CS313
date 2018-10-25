@@ -42,7 +42,7 @@
 	<div class="logo">register</div>
 	<!-- Main Form -->
 	<div class="login-form-1">
-		<form id="register-form" class="text-left">
+		<form id="register-form" class="text-left" action="create-user.php" method="POST">
 			<div class="login-form-main-message"></div>
 			<div class="main-login-form">
 				<div class="login-group">
