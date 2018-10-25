@@ -1,7 +1,9 @@
 <?php
-
 echo session_status();
-
+session_start();
+echo session_status();
+session_destroy();
+echo session_status();
 ?>
 <!DOCTYPE html>
 <html lang="en">
