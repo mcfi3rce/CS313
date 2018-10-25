@@ -34,30 +34,17 @@ try{
         $statement->execute();
         
         if ($row = $statement->fetch(PDO::FETCH_ASSOC)){
-            echo "AUTHENTICATED";
+            header("Location: book-list.php")
         }
         else
         {
-            echo "INVALID";
+            header("Location: login.php");
         }
             
-        /**
-        while ($row = $statement->fetch(PDO::FETCH_ASSOC))
-        {
-            if ($row['username'] == $_POST['lg_username'] && 
-                $row['password'] == $_POST['lg_password'])
-            {
-                echo "LOGGED IN";   
-            }
-            else
-            {
-                echo "INVALID PASSWORD";   
-            }
-        }**/
     } 
     else {
 
-        echo "DIDN'T WORK";
+        echo "ERROR sending POST \n";
     }
 }
 catch (Exception $ex)
