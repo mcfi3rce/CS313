@@ -1,22 +1,55 @@
 <?php
 /**********************************************************
-* File: authenticate.php
+* File: seeDetails.php
 * Author: Adam McPherson
 * 
-* Description: This is the login page and will hopefully be able 
-* to authenticate the user and allow for them to create their own 
-* shelves to put books on as well as adding books to the database.
+* Description: This is the book review page where all the current 
+* reviews will be listed for a book as well as the opportunity to 
+* add a review if logged in.
 ***********************************************************/
 
 require("dbConnect.php");
 $db = get_db();
 
-echo $_GET['book_id'];
 
-$row = $db->query("SELECT id, title, author, cover_art FROM book WHERE id = " . htmlspecialchars($_GET['book_id']) . "%'"); 
+try{
+    // Get the Data from the GET
+    
+    if (isset($_GET['book_id'])){
+        $book_id = $_GET['book_id'];
+        
+        $query = 'SELECT id, title, author, cover_art FROM book WHERE id = :book_id';
+        $statement = $db->prepare($query);
+        $statement->bindValue(':book_id', $book_id);
+        $statement->execute();
+        
+        $row = $statement->fetch(PDO::FETCH_ASSOC);
+        
+        $title = $row['title'];
+        $author = $row['author'];
+        $publisher = $row['publisher'];
+        $isbn = $row['isbn'];
+        $image = $row['cover_art'];
+        
+        #Testing all the data is received correctly
+        echo $title . "</br>";
+        echo $author . "</br>";
+        echo $publisher . "</br>";
+        echo $isbn . "</br>";
+        echo $image . "</br>";
+    } 
+    else {
 
-echo $row['title'];
-
+        echo "ERROR sending GET \n";
+    }
+}
+catch (Exception $ex)
+{
+	// Please be aware that you don't want to output the Exception message in
+	// a production environment
+	echo "Error with DB. Details: $ex";
+	die();
+}
 ?>
 
 <!DOCTYPE html>
