@@ -68,7 +68,7 @@ catch (Exception $ex)
 <div class="media">
   <img class="mr-3" src="<?php echo $image;?>" alt="Generic placeholder image">
   <div class="media-body">
-    <h5 class="mt-0"><?php $title?></h5>
+    <h5 class="mt-0"><?php echo $title;?></h5>
   </div>
 </div>
 </body>
