@@ -19,9 +19,7 @@ try{
     // Get the Data from the POST
     $username = $_POST['lg_username'];
     $password = $_POST['lg_password'];
-
-    echo "username= $username </br>";
-    echo "password= $password </br>";
+    $password = password_hash($password, PASSWORD_DEFAULT);
 
 
     if (isset($_POST['lg_username'])){
@@ -35,7 +33,6 @@ try{
         
         if ($row = $statement->fetch(PDO::FETCH_ASSOC)){
             session_start();
-            echo $row['id'];
             $_SESSION['user_id'] = $row['id'];
             $_SESSION['logged_in'] = true;
             header("Location: index.php");
