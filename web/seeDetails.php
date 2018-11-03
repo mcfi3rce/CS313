@@ -11,4 +11,4 @@
 require("dbConnect.php");
 $db = get_db();
 
-echo $_POST['book_id'];
+echo $_GET['book_id'];
