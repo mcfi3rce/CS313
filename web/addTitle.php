@@ -31,7 +31,7 @@ try{
     
     if (isset($_POST['title'])){
         
-        $query = 'INSERT INTO public.user(title, author, publisher, isbn, cover_art) VALUES (:title, :author, :publisher, :isbn, :cover_art)';
+        $query = 'INSERT INTO public.book (title, author, publisher, isbn, cover_art) VALUES (:title, :author, :publisher, :isbn, :cover_art)';
         $statement = $db->prepare($query);
         $statement->bindValue(':title', $title);
         $statement->bindValue(':author', $author);
