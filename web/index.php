@@ -79,27 +79,28 @@ if (!isset($_SESSION['logged_in'])){
         </a>
     </div> <!---- END OF SLIDER -->
     
-    <div id="book-form">
+    <div id="book-form" action="addTitle.php" method="post">
+      <h1>Add to Our Collection</h1>
        <form>
            <div class="form-group">
-               <label for="titleArea">Title</label>
-               <textarea class="form-control" id="titleArea" rows="1"></textarea>
+               <label for="title">Title</label>
+               <textarea class="form-control" id="title" rows="1"></textarea>
            </div>
            <div class="form-group">
-               <label for="publisherArea">Author</label>
-               <textarea class="form-control" id="publisherArea" rows="1"></textarea>
+               <label for="author">Author</label>
+               <textarea class="form-control" id="author" rows="1"></textarea>
            </div>
            <div class="form-group">
-               <label for="publisherArea">Publisher</label>
-               <textarea class="form-control" id="publisherArea" rows="1"></textarea>
+               <label for="publisher">Publisher</label>
+               <textarea class="form-control" id="publisher" rows="1"></textarea>
            </div>
            <div class="form-group">
-               <label for="isbnArea">ISBN</label>
-               <textarea class="form-control" id="isbnArea" rows="1"></textarea>
+               <label for="isbn">ISBN</label>
+               <textarea class="form-control" id="isbn" rows="1"></textarea>
            </div>
            <div class="form-group">
-               <label for="coverArtArea">Cover Art</label>
-               <textarea class="form-control" id="coverArtArea" rows="1"></textarea>
+               <label for="cover_art">Cover Art</label>
+               <textarea class="form-control" id="cover_art" rows="1"></textarea>
            </div>
            <button type="submit" class="btn btn-primary">Add Book</button>
         </form>

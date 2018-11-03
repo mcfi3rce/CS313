@@ -70,16 +70,12 @@ session_start();
             }
     }
     else {
-        for ($i = 1; $i <= 32; $i++) {
-            foreach ($db->query('SELECT title, author, cover_art FROM book') as $row)
-            {
-                echo "<div class='image-block col-sm-2' style='background:" . "url(" . $row["cover_art"] . ") no-repeat center  top;background-size:cover;'>";
-                echo "<p>" . "Title: " . $row["title"] . " Author: " . $row["author"] . "</p>";
-                echo '</div>';
-            }
+        foreach ($db->query('SELECT title, author, cover_art FROM book') as $row){
+            echo "<div class='image-block col-sm-2' style='background:" . "url(" . $row["cover_art"] . ") no-repeat center  top;background-size:cover;'>";
+            echo "<p>" . "Title: " . $row["title"] . " Author: " . $row["author"] . "</p>";
+            echo '</div>';
         }
     }
-
     ?>
     </div>      
 </div>
