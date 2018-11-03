@@ -23,11 +23,11 @@ try{
     $isbn = $_POST['isbn'];
     $cover_art = $_POST['cover_art'];
     
-    echo $title . '<br>';
-    echo $author . '<br>';
-    echo $publisher . '<br>';
-    echo $isbn . '<br>';
-    echo $cover_art . '<br>';
+    echo $title . '</br>';
+    echo $author . '</br>';
+    echo $publisher . '</br>';
+    echo $isbn . '</br>';
+    echo $cover_art . '</br>';
     /*
     if (isset($_POST['title'])){
         
