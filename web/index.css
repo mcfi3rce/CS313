@@ -32,12 +32,11 @@ body {
     text-transform: uppercase;
 }
 .btn {
-    font-size: 18px;
+    font-size: 12px;
     color: #FFF;
     padding: 12px 22px;
     background: #5E4485;
     border: 2px solid #FFF;
-        
 }
 
 @media (max-width: 600px) {

@@ -59,10 +59,6 @@ if (!isset($_SESSION['logged_in'])){
             <img src="img/mountains.png">
                 <div class="carousel-caption">
                     <h1>Books and Mountains</h1>
-                    <br>
-                    <button type="submit" onClick="location.href='login.php'" class="btn btn-default">
-                    Get Started
-                    </button>
                 </div>
             </div><!--- End Active -->
             <div class="item">
