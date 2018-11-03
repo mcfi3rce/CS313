@@ -36,8 +36,7 @@ if (!isset($_SESSION['logged_in'])){
                 <li class="active"><a href="#">Home</a></li>
                 <li><a href="book-list.php">Books</a></li>
                 <?php
-                if ($_SESSION['logged_in'] == true){
-                    echo $_SESSION['logged_in'];
+                if ($_SESSION['logged_in']){
                     echo '<li><a href="logout.php">Logout</a></li>';
                 }
                 else{     
@@ -84,6 +83,31 @@ if (!isset($_SESSION['logged_in'])){
         </a>
     </div> <!---- END OF SLIDER -->
     
+    <div id="book-form">
+       <form>
+           <div class="form-group">
+               <label for="titleArea">Title</label>
+               <textarea class="form-control" id="titleArea" rows="1"></textarea>
+           </div>
+           <div class="form-group">
+               <label for="publisherArea">Author</label>
+               <textarea class="form-control" id="publisherArea" rows="1"></textarea>
+           </div>
+           <div class="form-group">
+               <label for="publisherArea">Publisher</label>
+               <textarea class="form-control" id="publisherArea" rows="1"></textarea>
+           </div>
+           <div class="form-group">
+               <label for="isbnArea">ISBN</label>
+               <textarea class="form-control" id="isbnArea" rows="1"></textarea>
+           </div>
+           <div class="form-group">
+               <label for="coverArtArea">Cover Art</label>
+               <textarea class="form-control" id="coverArtArea" rows="1"></textarea>
+           </div>
+           <button type="submit" class="btn btn-primary">Add Book</button>
+        </form>
+    </div>
 </body>
 </html>
 

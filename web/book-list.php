@@ -38,7 +38,7 @@ session_start();
                 <li class="active"><a href="#">Books</a></li>
                 
                 <?php
-                if ($_SESSION['logged_in'] == true){
+                if ($_SESSION['logged_in']){
                     echo '<li><a href="logout.php">Logout</a></li>';
                 }
                 else{
