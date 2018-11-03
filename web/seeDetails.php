@@ -68,6 +68,7 @@ catch (Exception $ex)
 <div class="container-fluid">
   <div class="row content">
     <div class='image-block col-sm-2' style='background: url(<?php echo $image;?>) no-repeat center  top;background-size:cover;'>
+      </div>
       <br>
       <div class="input-group">
         <input type="text" class="form-control" placeholder="Search Blog..">
@@ -78,7 +79,7 @@ catch (Exception $ex)
         </span>
       </div>
     </div>
-
+    
     <div class="col-sm-9">
       <h4><small>Book Info</small></h4>
       <hr>
