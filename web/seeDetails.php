@@ -18,6 +18,7 @@ $row = $db->query("SELECT id, title, author, cover_art FROM book WHERE id = " . 
 echo $row['title'];
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
