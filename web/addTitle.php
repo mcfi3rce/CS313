@@ -23,12 +23,12 @@ try{
     $isbn = $_POST['isbn'];
     $cover_art = $_POST['cover_art'];
     
-    echo $title . '</br>';
+    /*echo $title . '</br>';
     echo $author . '</br>';
     echo $publisher . '</br>';
     echo $isbn . '</br>';
-    echo $cover_art . '</br>';
-    /*
+    echo $cover_art . '</br>';*/
+    
     if (isset($_POST['title'])){
         
         $query = 'INSERT INTO public.user(title, author, publisher, isbn, cover_art) VALUES (:title, :author, :publisher, :isbn, :cover_art)';
@@ -39,12 +39,13 @@ try{
         $statement->bindValue(':displayName', $displayName);
         $statement->bindValue(':cover_art', $cover_art);
         $statement->execute();    
+        
+        echo "SUCCESS!";
     } 
     else {
 
         echo "ERROR sending POST \n";
     }
-    */
 }
 catch (Exception $ex)
 {
