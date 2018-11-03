@@ -18,7 +18,7 @@ try{
     // Get the Data from the POST
     $username = $_POST['reg_username'];
     $password = $_POST['reg_password'];
-    $password = hash_password($password);
+    $password = password_hash($password);
     $email = $_POST['reg_email'];
     $displayName = $_POST['reg_displayname'];
     
