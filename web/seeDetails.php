@@ -68,15 +68,6 @@ catch (Exception $ex)
 <div class="container-fluid">
   <div class="row content">
     <div class='image-block col-sm-2' style='background: url(<?php echo $image;?>) no-repeat center  top;background-size:cover;'>
-      <br>
-      <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search Blog..">
-        <span class="input-group-btn">
-          <button class="btn btn-default" type="button">
-            <span class="glyphicon glyphicon-search"></span>
-          </button>
-        </span>
-      </div>
     </div>
 
     <div class="col-sm-9">
