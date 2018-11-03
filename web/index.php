@@ -37,6 +37,7 @@ if (!isset($_SESSION['logged_in'])){
                 <li><a href="book-list.php">Books</a></li>
                 <?php
                 if ($_SESSION['logged_in'] == true){
+                    echo $_SESSION['logged_in'];
                     echo '<li><a href="logout.php">Logout</a></li>';
                 }
                 else{     
