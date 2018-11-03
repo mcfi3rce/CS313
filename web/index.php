@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (!isset($_SESSION['logged_in']){
+if (!isset($_SESSION['logged_in'])){
     header("Location: login.php");
 }
 ?>
@@ -39,7 +39,7 @@ if (!isset($_SESSION['logged_in']){
                 if ($_SESSION['logged_in']){
                     echo '<li><a href="logout.php">Logout</a></li>';
                 }
-                else{
+                else{     
                     echo '<li><a href="login.php">Login</a></li>';
                 }
                 ?>
