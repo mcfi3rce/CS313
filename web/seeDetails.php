@@ -71,6 +71,10 @@ catch (Exception $ex)
     <h5 class="mt-0"><?php $title?></h5>
   </div>
 </div>
+</body>
+</html>
+
+
 
 
 
