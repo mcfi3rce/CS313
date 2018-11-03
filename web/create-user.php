@@ -19,6 +19,7 @@ try{
     $username = $_POST['reg_username'];
     $password = $_POST['reg_password'];
     $password = password_hash($password);
+    echo $password;
     $email = $_POST['reg_email'];
     $displayName = $_POST['reg_displayname'];
     
