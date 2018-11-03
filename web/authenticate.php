@@ -19,28 +19,26 @@ try{
     // Get the Data from the POST
     $username = $_POST['lg_username'];
     $password = $_POST['lg_password'];
-    $password = password_hash($password, PASSWORD_DEFAULT);
-
 
     if (isset($_POST['lg_username'])){
-        $query = 'SELECT id, username, password FROM public.user WHERE username = :username AND password = :password';
+        $query = 'SELECT id, username, password FROM public.user WHERE username = :username';
         $statement = $db->prepare($query);
-
         $statement->bindValue(':username', $username);
-        $statement->bindValue(':password', $password);
         $statement->execute();
         
-        echo $password . "</br>";
+        $row = $statement->fetch(PDO::FETCH_ASSOC);
         
-        if ($row = $statement->fetch(PDO::FETCH_ASSOC)){
-            echo $row['password'] . "</br>";
+        $hashed_password = $row['password'];
+        
+        $match = password_verify($password, $hashed_password);
+        if($match){ 
+            echo 'Password is valid';
             session_start();
             $_SESSION['user_id'] = $row['id'];
             $_SESSION['logged_in'] = true;
             #header("Location: index.php");
-        }
-        else
-        {
+        } else {
+            echo 'Password is not valid' ;
             #header("Location: login.php");
         }
             
