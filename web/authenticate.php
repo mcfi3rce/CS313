@@ -31,11 +31,14 @@ try{
         $statement->bindValue(':password', $password);
         $statement->execute();
         
+        echo $password . "</br>";
+        
         if ($row = $statement->fetch(PDO::FETCH_ASSOC)){
+            echo $row['password'] . "</br>";
             session_start();
             $_SESSION['user_id'] = $row['id'];
             $_SESSION['logged_in'] = true;
-            header("Location: index.php");
+            #header("Location: index.php");
         }
         else
         {
