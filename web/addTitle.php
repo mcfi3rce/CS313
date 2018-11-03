@@ -36,7 +36,7 @@ try{
         $statement->bindValue(':title', $title);
         $statement->bindValue(':author', $author);
         $statement->bindValue(':publisher', $publisher);
-        $statement->bindValue(':displayName', $displayName);
+        $statement->bindValue(':isbn', $isbn);
         $statement->bindValue(':cover_art', $cover_art);
         $statement->execute();    
         
