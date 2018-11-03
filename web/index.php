@@ -81,7 +81,7 @@ if (!isset($_SESSION['logged_in'])){
     
     <div>
       <h1>Add to Our Collection</h1>
-       <form id="book-form" action="addTitle.php" method="post">
+       <form id="book-form" action="addTitle.php" method="POST">
            <div class="form-group">
                <label for="title">Title</label>
                <input class="form-control" type="text" id="title" rows="1">
