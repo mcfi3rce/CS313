@@ -32,14 +32,12 @@ try{
         
         $match = password_verify($password, $hashed_password);
         if($match){ 
-            echo 'Password is valid';
             session_start();
             $_SESSION['user_id'] = $row['id'];
             $_SESSION['logged_in'] = true;
-            #header("Location: index.php");
+            header("Location: index.php");
         } else {
-            echo 'Password is not valid' ;
-            #header("Location: login.php");
+            header("Location: login.php");
         }
             
     } 
