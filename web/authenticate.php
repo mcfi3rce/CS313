@@ -23,7 +23,6 @@ try{
 
 
     if (isset($_POST['lg_username'])){
-        echo "SET";
         $query = 'SELECT id, username, password FROM public.user WHERE username = :username AND password = :password';
         $statement = $db->prepare($query);
 
