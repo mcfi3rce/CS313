@@ -22,8 +22,7 @@ try{
     $email = $_POST['reg_email'];
     $displayName = $_POST['reg_displayname'];
     
-    echo $password;
-    /*if (isset($_POST['reg_username'])){
+    if (isset($_POST['reg_username'])){
         
         $query = 'INSERT INTO public.user(username, password, email, display_name) VALUES (:username, :password, :email, :displayName)';
         $statement = $db->prepare($query);
@@ -37,7 +36,7 @@ try{
     else {
 
         echo "ERROR sending POST \n";
-    }*/
+    }
 }
 catch (Exception $ex)
 {
