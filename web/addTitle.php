@@ -40,7 +40,7 @@ try{
         $statement->bindValue(':cover_art', $cover_art);
         $statement->execute();    
         
-        echo "SUCCESS!";
+        header("Location: book-list.php");
     } 
     else {
 

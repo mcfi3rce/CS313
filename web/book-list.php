@@ -61,18 +61,19 @@ session_start();
     <div class="row">        
     <?php
     if (isset($_POST['search'])){
-        echo "POST: "  . $_POST['search'] . "</br>";
         foreach ($db->query("SELECT title, author, cover_art FROM book WHERE title like '%" . htmlspecialchars($_POST['search']) . "%'") as $row)
             {
+                echo "<a href=\"seeDetails.php?book_id=".$row['id']."\">";
                 echo "<div class='image-block col-sm-2' style='background:" . "url(" . $row["cover_art"] . ") no-repeat center  top;background-size:cover;'>";
-                echo "<p>" . "Title: " . $row["title"] . " Author: " . $row["author"] . "</p>";
+                echo "<p> See Details</p>";
                 echo '</div>';
             }
     }
     else {
         foreach ($db->query('SELECT title, author, cover_art FROM book') as $row){
+            echo "<a href=\"seeDetails.php?book_id=".$row['id']."\">";
             echo "<div class='image-block col-sm-2' style='background:" . "url(" . $row["cover_art"] . ") no-repeat center  top;background-size:cover;'>";
-            echo "<p>" . "Title: " . $row["title"] . " Author: " . $row["author"] . "</p>";
+            echo "<p>See Details</p>";
             echo '</div>';
         }
     }

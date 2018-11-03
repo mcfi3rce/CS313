@@ -108,8 +108,3 @@ if (!isset($_SESSION['logged_in'])){
     
 </body>
 </html>
-
-<?php
-
-    echo "This is where your books will show once you add some"
-?>
