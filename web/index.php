@@ -84,27 +84,28 @@ if (!isset($_SESSION['logged_in'])){
        <form action="addTitle.php" method="POST">
            <div class="form-group">
                <label for="title">Title</label>
-               <input class="form-control" type="text" id="title">
+               <input class="form-control" type="text" name="title" id="title">
            </div>
            <div class="form-group">
                <label for="author">Author</label>
-               <input class="form-control" type="text" id="author" rows="1">
+               <input class="form-control" type="text" name="author" id="author">
            </div>
            <div class="form-group">
                <label for="publisher">Publisher</label>
-               <input class="form-control" type="text" id="publisher">
+               <input class="form-control" type="text" name="publisher" id="publisher">
            </div>
            <div class="form-group">
                <label for="isbn">ISBN</label>
-               <input class="form-control" type="text" id="isbn">
+               <input class="form-control" type="text" name="isbn" id="isbn">
            </div>
            <div class="form-group">
                <label for="cover_art">Cover Art</label>
-               <input class="form-control" type="text" id="cover_art">
+               <input class="form-control" type="text" name="cover_art" id="cover_art">
            </div>
            <button type="submit" class="btn btn-primary">Add Book</button>
         </form>
     </div>
+    
 </body>
 </html>
 

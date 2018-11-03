@@ -15,19 +15,6 @@ $db = get_db();
 * INSERT INTO public.book (title, author, publisher, isbn, cover_art)
 */
 
-   // Get the Data from the POST
-    $title = $_POST['title'];
-    $author = $_POST['author'];
-    $publisher = $_POST['publisher'];
-    $isbn = $_POST['isbn'];
-    $cover_art = $_POST['cover_art'];
-    
-    echo $title . '</br>';
-    echo $author . '</br>';
-    echo $publisher . '</br>';
-    echo $isbn . '</br>';
-    echo $cover_art . '</br>';
-
 try{
     // Get the Data from the POST
     $title = $_POST['title'];
