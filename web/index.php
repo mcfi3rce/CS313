@@ -36,7 +36,7 @@ if (!isset($_SESSION['logged_in'])){
                 <li class="active"><a href="#">Home</a></li>
                 <li><a href="book-list.php">Books</a></li>
                 <?php
-                if ($_SESSION['logged_in']){
+                if ($_SESSION['logged_in'] == true){
                     echo '<li><a href="logout.php">Logout</a></li>';
                 }
                 else{     
