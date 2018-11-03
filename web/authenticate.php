@@ -37,6 +37,7 @@ try{
             session_start();
             echo $row['id'];
             $_SESSION['user_id'] = $row['id'];
+            $_SESSION['logged_in'] = true;
             header("Location: index.php");
         }
         else

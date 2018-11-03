@@ -1,9 +1,8 @@
 <?php
-echo session_status();
 session_start();
-if (session_status() == 1)
-    echo $_SESSION['user_id'];
-    #header("Location: login.php");
+if (!isset($_SESSION['logged_in']){
+    header("Location: login.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,10 +35,12 @@ if (session_status() == 1)
             <ul class="nav navbar-nav navbar-right">
                 <li class="active"><a href="#">Home</a></li>
                 <li><a href="book-list.php">Books</a></li>
-                <li><a href="login.php">Login</a></li>
                 <?php
-                if (session_status() == 2){
-                echo '<li><a href="logout.php">Logout</a></li>';
+                if ($_SESSION['logged_in']){
+                    echo '<li><a href="logout.php">Logout</a></li>';
+                }
+                else{
+                    echo '<li><a href="login.php">Login</a></li>';
                 }
                 ?>
             </ul>    
