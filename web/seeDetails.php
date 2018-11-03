@@ -18,7 +18,7 @@ try{
     if (isset($_GET['book_id'])){
         $book_id = $_GET['book_id'];
         
-        $query = 'SELECT id, title, author, cover_art FROM book WHERE id = :book_id';
+        $query = 'SELECT id, title, publisher, isbn, author, cover_art FROM book WHERE id = :book_id';
         $statement = $db->prepare($query);
         $statement->bindValue(':book_id', $book_id);
         $statement->execute();
