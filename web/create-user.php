@@ -21,12 +21,12 @@ try{
     $password = hash_password($password);
     $email = $_POST['reg_email'];
     $displayName = $_POST['reg_displayname'];
-
-    if (isset($_POST['reg_username'])){
+    
+    echo $password;
+    /*if (isset($_POST['reg_username'])){
         
         $query = 'INSERT INTO public.user(username, password, email, display_name) VALUES (:username, :password, :email, :displayName)';
         $statement = $db->prepare($query);
-
         $statement->bindValue(':username', $username);
         $statement->bindValue(':password', $password);
         $statement->bindValue(':email', $email);
@@ -37,7 +37,7 @@ try{
     else {
 
         echo "ERROR sending POST \n";
-    }
+    }*/
 }
 catch (Exception $ex)
 {
