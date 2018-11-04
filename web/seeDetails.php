@@ -59,14 +59,9 @@ catch (Exception $ex)
   <meta charset="utf-8">
 </head>
 <body>
-<div class="grid-container">
-  <div class="Picture">
-  </div>
-  <div class="Information">
-  </div>
-  <div class="Review-Area">
-  </div>
-</div>
+
+<img src="<?php echo $image; ?>" class="rounded float-left" alt="...">
+
 </body>
 </html>
 
