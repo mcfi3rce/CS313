@@ -1,6 +1,9 @@
 img {
     float:left;
 }
-h3,p {
+h3{
     float:right;
+}
+p{
+    display:inline;
 }
