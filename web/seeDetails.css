@@ -1,5 +1,7 @@
 img {
     float:left;
+    width: 300px;
+    height: 600px;
 }
 h3{
     display:inline;
