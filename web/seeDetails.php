@@ -58,7 +58,7 @@ catch (Exception $ex)
   <title>Adam McPherson Homepage</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="index.css">
+  <link rel="stylesheet" type="text/css" href="seeDetails.css">
   <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -66,14 +66,14 @@ catch (Exception $ex)
 <body>
 <div name="book-description">
     <img src="<?php echo $image; ?>" class="rounded float-left" alt="...">
-    <h3 class="text-right">Title</h3>
-    <p class="text-right"><?php echo $title;?></p>
-    <h3 class="text-right">Author</h3>
-    <p class="text-right"><?php echo $author;?></p>
-    <h3 class="text-right">Publisher</h3>
-    <p class="text-right"><?php echo $publisher;?></p>
-    <h3 class="text-right">ISBN</h3>
-    <p class="text-right"><?php echo $isbn;?></p>
+    <h3>Title</h3>
+    <p><?php echo $title;?></p>
+    <h3>Author</h3>
+    <p><?php echo $author;?></p>
+    <h3>Publisher</h3>
+    <p><?php echo $publisher;?></p>
+    <h3>ISBN</h3>
+    <p><?php echo $isbn;?></p>
 </div>
 
 </body>
