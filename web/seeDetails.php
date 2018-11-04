@@ -32,11 +32,11 @@ try{
         $image = $row['cover_art'];
         
         #Testing all the data is received correctly
-        echo $title . "</br>";
+        /*echo $title . "</br>";
         echo $author . "</br>";
         echo $publisher . "</br>";
         echo $isbn . "</br>";
-        echo $image . "</br>";
+        echo $image . "</br>";*/
     } 
     else {
 
