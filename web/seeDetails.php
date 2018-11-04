@@ -57,18 +57,14 @@ catch (Exception $ex)
 <head>
   <title>Adam McPherson Homepage</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="seeDetails.css">
-  <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-<div class="media">
-  <img class="mr-3" src="<?php echo $image;?>" alt="Generic placeholder image">
-  <div class="media-body">
-    <h5 class="mt-0"><?php echo $title;?></h5>
+<div class="grid-container">
+  <div class="Picture">
+  </div>
+  <div class="Information">
+  </div>
+  <div class="Review-Area">
   </div>
 </div>
 </body>
