@@ -66,9 +66,14 @@ catch (Exception $ex)
 <body>
 <div name="book-description">
     <img src="<?php echo $image; ?>" class="rounded float-left" alt="...">
-    <h5 class="text-right">Title</h5>
+    <h3 class="text-right">Title</h3>
     <p class="text-right"><?php echo $title;?></p>
-    
+    <h3 class="text-right">Author</h3>
+    <p class="text-right"><?php echo $author;?></p>
+    <h3 class="text-right">Publisher</h3>
+    <p class="text-right"><?php echo $publisher;?></p>
+    <h3 class="text-right">ISBN</h3>
+    <p class="text-right"><?php echo $isbn;?></p>
 </div>
 
 </body>
