@@ -44,7 +44,7 @@ try{
         
         $query = 'INSERT INTO public.books_read (user_id, book_id, rating, review, would_recommend) VALUES (:user_id, :book_id, :rating, :review, :recommend)';
         $statement = $db->prepare($query);
-        $statement->bindValue(':user_id', $title);
+        $statement->bindValue(':user_id', $user_id);
         $statement->bindValue(':book_id', $book_id);
         $statement->bindValue(':rating', $rating);
         $statement->bindValue(':review', $review);
