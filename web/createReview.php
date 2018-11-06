@@ -6,7 +6,7 @@
     $recommend = $_POST['recommend'];
 
 echo $title . "<br>";
-echo $review . "<br>";
+echo $comment . "<br>";
 echo $rating . "<br>";
 echo $recommend . "<br>";
 
