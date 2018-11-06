@@ -10,6 +10,7 @@ echo $title . "<br>";
 echo $comment . "<br>";
 echo $rating . "<br>";
 echo $recommend . "<br>";
+echo $book_id . "<br>";
 
 try{
     // Get the Data from the GET
