@@ -161,6 +161,7 @@ catch (Exception $ex)
 
 <form action="createReview.php" method="POST" id="myform">
     <div class="form-group">
+       <input type="hidden" name="book_id" value="<?php echo $book_id;?>">
         <label for="title">Title:</label>
         <input type="text" class="form-control" rows="1" name="title">
       
@@ -186,7 +187,7 @@ catch (Exception $ex)
     <div>
         <label for="recommend">Would Recommend?:</label>
      <!-- Use an element to toggle between a like/dislike icon -->
-    <i onclick="myFunction(this)" class="fa fa-thumbs-up" name="recommend"></i>
+    <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
      <input type="hidden" name="recommend" id="recommend" value="1">
       <script>
         function myFunction(x) {
