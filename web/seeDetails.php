@@ -185,7 +185,7 @@ catch (Exception $ex)
     <div>
         <label for="recommend">Would Recommend?:</label>
      <!-- Use an element to toggle between a like/dislike icon -->
-    <i onclick="myFunction(this)" class="fa fa-thumbs-up" name="recommend" value="1"></i>
+    <i onclick="myFunction(this)" class="fa fa-thumbs-up" name="recommend" id="recommend" value="1"></i>
       <script>
         function myFunction(x) {
             x.classList.toggle("fa-thumbs-down");
