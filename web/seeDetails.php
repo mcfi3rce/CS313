@@ -191,7 +191,7 @@ catch (Exception $ex)
                 x.setAttribute("value", "0");
             }
             else{
-                x.setAttribute("value", "1');
+                x.setAttribute("value", "1");
             }
             console.log(x.getAttribute("value"));
         }
