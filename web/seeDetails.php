@@ -108,7 +108,9 @@ try{
             echo      "<h4>" . $row['title'] . "</h4>";
             echo      '<div class="ratebox text-center" data-id="0" data-rating="5"></div>';
             echo      "<p class='review-text'>" . $row['review'] . "</p>";
-            echo      "<p class='review-text'> Rating:" . $row['rating'] . "</small>";
+            echo      "<p class='review-text'> Rating: " . $row['rating'] . "</p>";
+            echo      "<br>";
+            echo      "<p class='review-text> Would Recommend?: </p>";
             if ($row['would_recommend']){
                 echo  '<i class="fa fa-thumbs-up"></i>';
             }
