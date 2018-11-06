@@ -188,7 +188,7 @@ catch (Exception $ex)
         function myFunction(x) {
             x.classList.toggle("fa-thumbs-down");
             if (x.classList == "fa-thumbs-down"){
-                console.log("Down");
+                console.log(x.getAttribute("value"));
             }
         }
     </script>   
