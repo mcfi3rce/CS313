@@ -89,7 +89,7 @@ catch (Exception $ex)
 <div class="reviews">
   <div class="row blockquote review-item">
     <div class="col-md-3 text-center">
-      <img class="rounded-circle reviewer" src="http://standaloneinstaller.com/upload/avatar.png">
+      <img class="rounded-circle reviewer" src="https://standaloneinstaller.com/upload/avatar.png">
       <div class="caption">
         <small>by <a href="#joe">Joe</a></small>
       </div>
@@ -105,34 +105,12 @@ catch (Exception $ex)
   </div>  
 </div>
 
-
-<div class="container">
-	<div class="row" style="margin-top:40px;">
-		<div class="col-md-6">
-    	<div class="well well-sm">
-            <div class="text-right">
-                <a class="btn btn-success btn-green" href="#seeDetails.js" id="open-review-box">Leave a Review</a>
-            </div>
-        
-            <div class="row" id="post-review-box" style="display:none;">
-                <div class="col-md-12">
-                    <form accept-charset="UTF-8" action="" method="post">
-                        <input id="ratings-hidden" name="rating" type="hidden"> 
-                        <textarea class="form-control animated" cols="50" id="new-review" name="comment" placeholder="Enter your review here..." rows="5"></textarea>
-        
-                        <div class="text-right">
-                            <div class="stars starrr" data-rating="0"></div>
-                            <a class="btn btn-danger btn-sm" href="#" id="close-review-box" style="display:none; margin-right: 10px;">
-                            <span class="glyphicon glyphicon-remove"></span>Cancel</a>
-                            <button class="btn btn-success btn-lg" type="submit">Save</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div> 
-         
-		</div>
-	</div>
+<div class="add-review">
+    <div class="form-group">
+      <label for="comment">Reivew:</label>
+      <textarea class="form-control" rows="5" id="comment"></textarea>
+      <button type="submit" class="btn btn-default">Default</button>
+    </div>
 </div>
 
 
