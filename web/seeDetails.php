@@ -162,7 +162,7 @@ catch (Exception $ex)
 <form action="createReview.php" method="post">
     <div class="form-group">
       <label for="title">Title:</label>
-      <textarea class="form-control" rows="1" id="title"></textarea>
+      <input type="text" class="form-control" rows="1" name="title"></textarea>
       <label for="comment">Review:</label>
       <textarea class="form-control" rows="5" id="comment"></textarea>
       <label for="rating">Rating:</label>
