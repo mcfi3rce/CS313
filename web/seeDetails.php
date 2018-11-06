@@ -56,7 +56,7 @@ try{
     
     if (isset($_GET['book_id'])){
         
-        $query = 'SELECT display_name, title, review, rating, cover_art 
+        $query = 'SELECT display_name, title, review, rating, would_recommend 
         FROM public.books_read AS b
         INNER JOIN public.user AS u
         ON b.user_id = u.id
