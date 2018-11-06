@@ -159,7 +159,7 @@ catch (Exception $ex)
   </div>  
 </div>
 
-<form action="createReview.php" method="post" id="myform">
+<form action="createReview.php" method="GET" id="myform">
     <div class="form-group">
       <label for="title">Title:</label>
       <input type="text" class="form-control" rows="1" name="title">

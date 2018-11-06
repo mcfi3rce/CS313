@@ -1,9 +1,9 @@
 <?php
 
-    $title = $_POST['title'];
-    $comment = $_POST['comment'];
-    $rating = $_POST['rating'];
-    $recommend = $_POST['recommend'];
+    $title = $_GET['title'];
+    $comment = $_GET['comment'];
+    $rating = $_GET['rating'];
+    $recommend = $_GET['recommend'];
 
 echo $title . "<br>";
 echo $review . "<br>";
