@@ -100,42 +100,35 @@ catch (Exception $ex)
 <div class="info">
     <img src="<?php echo $image; ?>" class="rounded float-left" alt="..." id="cover">
     <h3>Title</h3>
-    <br>
     <p><?php echo $title;?></p>
-    <br>
     <h3>Author</h3>
-    <br>
     <p><?php echo $author;?></p>
-    <br>
     <h3>Publisher</h3>
-    <br>
     <p><?php echo $publisher;?></p>
-    <br>
     <h3>ISBN</h3>
-    <br>
     <p><?php echo $isbn;?></p>
-    <br>
-    <br>
 </div>
 
-<div class="reviews">
-  <div class="row blockquote review-item">
-    <div class="col-md-3 text-center">
-      <img class="rounded-circle reviewer" src="https://standaloneinstaller.com/upload/avatar.png">
-      <div class="caption">
-        <small>by <a href="#joe">Joe</a></small>
-      </div>
-
-    </div>
-    <div class="col-md-9">
-      <h4>My awesome review</h4>
-      <div class="ratebox text-center" data-id="0" data-rating="5"></div>
-      <p class="review-text">My awesome review. My awesome review. My awesome review. My awesome review. My awesome review. My awesome review. My awesome review. My awesome review. My awesome review. My awesome review. My awesome review. </p>
-
-      <small class="review-date">March 26, 2017</small>
-    </div>                          
-  </div>  
-</div>
+<?php
+    foreach ($row){
+        echo '<div class="reviews">';
+        echo  '<div class="row blockquote review-item">';
+        echo    '<div class="col-md-3 text-center">';
+        echo      '<img class="rounded-circle reviewer" src="https://standaloneinstaller.com/upload/avatar.png">';
+        echo      '<div class="caption">';
+        echo        "<small>by " . $row['display_name'] . "</small>";
+        echo      '</div>';
+        echo    '</div>';
+        echo    '<div class="col-md-9">';
+        echo      "<h4>" . $row['title'] . "</h4>";
+        echo      '<div class="ratebox text-center" data-id="0" data-rating="5"></div>';
+        echo      "<p class='review-text'>" . $row['review'] . "</p>";
+        echo      "<p class='review-text'>" . $row['rating'] . "</small>";
+        echo    "</div>";                          
+        echo  '</div>' ;  
+        echo '</div>';
+    }
+?>
 
 <form action="createReview.php" method="POST" id="myform">
     <div class="form-group">
