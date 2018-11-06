@@ -161,12 +161,14 @@ catch (Exception $ex)
 
 <div class="add-review">
     <div class="form-group">
-      <label for="comment">Title:</label>
-      <textarea class="form-control" rows="1" id="Title"></textarea>
+      <label for="title">Title:</label>
+      <textarea class="form-control" rows="1" id="title"></textarea>
       <label for="comment">Review:</label>
       <textarea class="form-control" rows="5" id="comment"></textarea>
+      <label for="rating">Rating:</label>
       <div class="slidecontainer">
       <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+      <p id="demo"></p>
       <script>
         var slider = document.getElementById("myRange");
         var output = document.getElementById("demo");
