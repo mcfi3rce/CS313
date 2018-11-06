@@ -162,12 +162,12 @@ catch (Exception $ex)
 <form action="createReview.php" method="post">
     <div class="form-group">
       <label for="title">Title:</label>
-      <input type="text" class="form-control" rows="1" name="title"></textarea>
+      <input type="text" class="form-control" rows="1" name="title">
       <label for="comment">Review:</label>
-      <textarea class="form-control" rows="5" id="comment"></textarea>
+      <input type="text" class="form-control" rows="5" name="comment">
       <label for="rating">Rating:</label>
       <div class="slidecontainer">
-          <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+          <input type="range" min="1" max="100" value="50" class="slider" name="rating" id="myRange">
           <p>Rating: <span id="demo"></span></p>
     </div>
      <script>
@@ -183,7 +183,7 @@ catch (Exception $ex)
     <div>
         <label for="recommend">Would Recommend?:</label>
      <!-- Use an element to toggle between a like/dislike icon -->
-    <i onclick="myFunction(this)" class="fa fa-thumbs-up" id="thumb" value="1"></i>
+    <i onclick="myFunction(this)" class="fa fa-thumbs-up" name="thumb" value="1"></i>
       <script>
         function myFunction(x) {
             x.classList.toggle("fa-thumbs-down");

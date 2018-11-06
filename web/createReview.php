@@ -3,7 +3,7 @@
     $title = $_POST['title'];
     $review = $_POST['review'];
     $rating = $_POST['slider'];
-    $recommend = $_POST['thumb'];
+    $recommend = $_POST['rating'];
 
 echo $title . "<br>";
 echo $review . "<br>";
