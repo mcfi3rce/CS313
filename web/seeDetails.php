@@ -55,7 +55,7 @@ catch (Exception $ex)
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Adam McPherson Homepage</title>
+  <title><?php echo $title;?></title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="seeDetails.css">
@@ -82,6 +82,14 @@ catch (Exception $ex)
     <br>
     <p><?php echo $isbn;?></p>
     <br>
+</div>
+
+<div class="reviews">
+    <h2> Reviews </h2>
+    
+    
+    
+    
 </div>
 
 </body>
