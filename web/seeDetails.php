@@ -40,7 +40,7 @@ try{
     } 
     else {
 
-        echo "ERROR sending GET \n";
+        echo "ERROR reading GET \n";
     }
 }
 catch (Exception $ex)
@@ -71,29 +71,22 @@ try{
         */
             
         
-        $query = 'SELECT display_name, publisher, isbn, author, cover_art FROM book WHERE id = :book_id';
+        $query = 'SELECT display_name, title, review, rating, cover_art 
+        FROM public.books_read AS b
+        INNER JOIN public.user AS u
+        ON b.user_id = u.id
+        WHERE b.book_id = :book_id';
+        
         $statement = $db->prepare($query);
         $statement->bindValue(':book_id', $book_id);
         $statement->execute();
         
         $row = $statement->fetch(PDO::FETCH_ASSOC);
-        
-        $title = $row['title'];
-        $author = $row['author'];
-        $publisher = $row['publisher'];
-        $isbn = $row['isbn'];
-        $image = $row['cover_art'];
-        
-        #Testing all the data is received correctly
-        /*echo $title . "</br>";
-        echo $author . "</br>";
-        echo $publisher . "</br>";
-        echo $isbn . "</br>";
-        echo $image . "</br>";*/
-    } 
+        echo "SUCCESS!";
+        } 
     else {
 
-        echo "ERROR sending GET \n";
+        echo "ERROR reading GET \n";
     }
 }
 catch (Exception $ex)
