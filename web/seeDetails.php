@@ -159,7 +159,7 @@ catch (Exception $ex)
   </div>  
 </div>
 
-<div class="add-review">
+<form action="createReview.php" method="post">
     <div class="form-group">
       <label for="title">Title:</label>
       <textarea class="form-control" rows="1" id="title"></textarea>
@@ -181,9 +181,9 @@ catch (Exception $ex)
     </script>
     
     <div>
-        <label for="rating">Would Recommend?:</label>
+        <label for="recommend">Would Recommend?:</label>
      <!-- Use an element to toggle between a like/dislike icon -->
-    <i onclick="myFunction(this)" class="fa fa-thumbs-up" value="1"></i>
+    <i onclick="myFunction(this)" class="fa fa-thumbs-up" id="thumb" value="1"></i>
       <script>
         function myFunction(x) {
             x.classList.toggle("fa-thumbs-down");
@@ -201,7 +201,7 @@ catch (Exception $ex)
      <button type="submit" class="btn btn-primary">Submit Review</button>
       
     </div>
-</div>
+</form>
 
 
 </body>
