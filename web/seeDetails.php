@@ -50,37 +50,6 @@ catch (Exception $ex)
 	echo "Error with DB. Details: $ex";
 	die();
 }
-
-try{
-    // Get the Data from the GET
-    
-    if (isset($_GET['book_id'])){
-        
-        $query = 'SELECT display_name, title, review, rating, would_recommend 
-        FROM public.books_read AS b
-        INNER JOIN public.user AS u
-        ON b.user_id = u.id
-        WHERE b.book_id = :book_id';
-        
-        $statement = $db->prepare($query);
-        $statement->bindValue(':book_id', $book_id);
-        $statement->execute();
-        
-        $row = $statement->fetch(PDO::FETCH_ASSOC);
-        echo "SUCCESS!";
-        } 
-    else {
-
-        echo "ERROR reading GET \n";
-    }
-}
-catch (Exception $ex)
-{
-	// Please be aware that you don't want to output the Exception message in
-	// a production environment
-	echo "Error with DB. Details: $ex";
-	die();
-}
 ?>
 
 <!DOCTYPE html>
@@ -110,24 +79,55 @@ catch (Exception $ex)
 </div>
 
 <?php
-    foreach ($row){
-        echo '<div class="reviews">';
-        echo  '<div class="row blockquote review-item">';
-        echo    '<div class="col-md-3 text-center">';
-        echo      '<img class="rounded-circle reviewer" src="https://standaloneinstaller.com/upload/avatar.png">';
-        echo      '<div class="caption">';
-        echo        "<small>by " . $row['display_name'] . "</small>";
-        echo      '</div>';
-        echo    '</div>';
-        echo    '<div class="col-md-9">';
-        echo      "<h4>" . $row['title'] . "</h4>";
-        echo      '<div class="ratebox text-center" data-id="0" data-rating="5"></div>';
-        echo      "<p class='review-text'>" . $row['review'] . "</p>";
-        echo      "<p class='review-text'>" . $row['rating'] . "</small>";
-        echo    "</div>";                          
-        echo  '</div>' ;  
-        echo '</div>';
+    
+try{
+    // Get the Data from the GET
+    
+    if (isset($_GET['book_id'])){
+        
+        $query = 'SELECT display_name, title, review, rating, would_recommend 
+        FROM public.books_read AS b
+        INNER JOIN public.user AS u
+        ON b.user_id = u.id
+        WHERE b.book_id = :book_id';
+        
+        $statement = $db->prepare($query);
+        $statement->bindValue(':book_id', $book_id);
+        $statement->execute();
+        
+        $row = $statement->fetch(PDO::FETCH_ASSOC);
+        
+        while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
+            echo '<div class="reviews">';
+            echo  '<div class="row blockquote review-item">';
+            echo    '<div class="col-md-3 text-center">';
+            echo      '<img class="rounded-circle reviewer" src="https://standaloneinstaller.com/upload/avatar.png">';
+            echo      '<div class="caption">';
+            echo        "<small>by " . $row['display_name'] . "</small>";
+            echo      '</div>';
+            echo    '</div>';
+            echo    '<div class="col-md-9">';
+            echo      "<h4>" . $row['title'] . "</h4>";
+            echo      '<div class="ratebox text-center" data-id="0" data-rating="5"></div>';
+            echo      "<p class='review-text'>" . $row['review'] . "</p>";
+            echo      "<p class='review-text'>" . $row['rating'] . "</small>";
+            echo    "</div>";                          
+            echo  '</div>' ;  
+            echo '</div>';
+            }
+        } 
+    else {
+
+        echo "ERROR reading GET \n";
     }
+}
+catch (Exception $ex)
+{
+	// Please be aware that you don't want to output the Exception message in
+	// a production environment
+	echo "Error with DB. Details: $ex";
+	die();
+}
 ?>
 
 <form action="createReview.php" method="POST" id="myform">
