@@ -24,7 +24,8 @@ CREATE TABLE public.books_read
 	id SERIAL NOT NULL PRIMARY KEY,
 	user_id INT NOT NULL REFERENCES public.user(id),
 	book_id INT NOT NULL REFERENCES public.book(id),
-	rating FLOAT NOT NULL,
+    title VARCHAR(255) NOT NULL,
+	rating INT NOT NULL,
 	review TEXT,
     would_recommend BOOLEAN
 );

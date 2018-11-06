@@ -50,6 +50,60 @@ catch (Exception $ex)
 	echo "Error with DB. Details: $ex";
 	die();
 }
+
+try{
+    // Get the Data from the GET
+    
+    if (isset($_SESSION['user_id'])){
+        $user_id = $_SESSION['user_id'];
+        
+        /*
+        CREATE TABLE public.books_read
+        (
+	       id SERIAL NOT NULL PRIMARY KEY,
+	       user_id INT NOT NULL REFERENCES public.user(id),
+	       book_id INT NOT NULL REFERENCES public.book(id),
+	       rating FLOAT NOT NULL,
+	       review TEXT,
+            would_recommend BOOLEAN
+        );
+        
+        
+        */
+            
+        
+        $query = 'SELECT display_name, publisher, isbn, author, cover_art FROM book WHERE id = :book_id';
+        $statement = $db->prepare($query);
+        $statement->bindValue(':book_id', $book_id);
+        $statement->execute();
+        
+        $row = $statement->fetch(PDO::FETCH_ASSOC);
+        
+        $title = $row['title'];
+        $author = $row['author'];
+        $publisher = $row['publisher'];
+        $isbn = $row['isbn'];
+        $image = $row['cover_art'];
+        
+        #Testing all the data is received correctly
+        /*echo $title . "</br>";
+        echo $author . "</br>";
+        echo $publisher . "</br>";
+        echo $isbn . "</br>";
+        echo $image . "</br>";*/
+    } 
+    else {
+
+        echo "ERROR sending GET \n";
+    }
+}
+catch (Exception $ex)
+{
+	// Please be aware that you don't want to output the Exception message in
+	// a production environment
+	echo "Error with DB. Details: $ex";
+	die();
+}
 ?>
 
 <!DOCTYPE html>
@@ -107,8 +161,22 @@ catch (Exception $ex)
 
 <div class="add-review">
     <div class="form-group">
+      <label for="comment">Title:</label>
+      <textarea class="form-control" rows="1" id="Title"></textarea>
       <label for="comment">Review:</label>
       <textarea class="form-control" rows="5" id="comment"></textarea>
+      <div class="slidecontainer">
+      <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+      <script>
+        var slider = document.getElementById("myRange");
+        var output = document.getElementById("demo");
+        output.innerHTML = slider.value;
+
+        slider.oninput = function() {
+          output.innerHTML = this.value;
+        }
+    </script>
+    </div>
       <button type="submit" class="btn btn-primary">Submit Review</button>
     </div>
 </div>
