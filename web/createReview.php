@@ -65,8 +65,7 @@ catch (Exception $ex)
 	echo "Error with DB. Details: $ex";
 	die();
 }
-<?php
-    
-    echo "header(\"Location: seeDetails.php?book_id=" . $book_id . "\");";
-    die();
+
+header("Location: seeDetails.php?book_id=" . $book_id);
+
 ?>
