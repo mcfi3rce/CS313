@@ -168,17 +168,25 @@ catch (Exception $ex)
       <label for="rating">Rating:</label>
       <div class="slidecontainer">
       <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-      <p id="demo"></p>
+      <p id="rating"></p>
       <script>
         var slider = document.getElementById("myRange");
-        var output = document.getElementById("demo");
+        var output = document.getElementById("rating");
         output.innerHTML = slider.value;
 
         slider.oninput = function() {
           output.innerHTML = this.value;
         }
+        
+        function myFunction(x) {
+            x.classList.toggle("fa-thumbs-down");
+        }
     </script>
     </div>
+    
+     <label for="rating">Would Reccommend?:</label>
+     <!-- Use an element to toggle between a like/dislike icon -->
+    <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
       <button type="submit" class="btn btn-primary">Submit Review</button>
     </div>
 </div>
