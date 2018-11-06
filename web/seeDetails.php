@@ -107,9 +107,9 @@ catch (Exception $ex)
 
 <div class="add-review">
     <div class="form-group">
-      <label for="comment">Reivew:</label>
+      <label for="comment">Review:</label>
       <textarea class="form-control" rows="5" id="comment"></textarea>
-      <button type="submit" class="btn btn-default">Default</button>
+      <button type="submit" class="btn btn-primary">Submit Review</button>
     </div>
 </div>
 
