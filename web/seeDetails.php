@@ -186,17 +186,18 @@ catch (Exception $ex)
     <div>
         <label for="recommend">Would Recommend?:</label>
      <!-- Use an element to toggle between a like/dislike icon -->
-    <i onclick="myFunction(this)" class="fa fa-thumbs-up" name="recommend" id="recommend" value="1"></i>
+    <i onclick="myFunction(this)" class="fa fa-thumbs-up" name="recommend"></i>
+     <input type="hidden" name="recommend" id="recommend" value="1">
       <script>
         function myFunction(x) {
             x.classList.toggle("fa-thumbs-down");
-            if (x.getAttribute("value") == "1"){
-                x.setAttribute("value", "0");
+            if (document.getElementById("recommend").getAttribute("value") == "1"){
+                document.getElementById("recommend").setAttribute("value", "0");
             }
             else{
-                x.setAttribute("value", "1");
+                document.getElementById("recommend").setAttribute("value", "1");
             }
-            console.log(x.getAttribute("value"));
+            console.log(document.getElementById("recommend").getAttribute("value"));
         }
     </script>   
     </div>
