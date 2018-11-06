@@ -169,10 +169,10 @@ catch (Exception $ex)
       <label for="rating">Rating:</label>
       <div class="slidecontainer">
       <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-      <p id="rating"></p>
+      <p id="demo"></p>
       <script>
         var slider = document.getElementById("myRange");
-        var output = document.getElementById("rating");
+        var output = document.getElementById("demo");
         output.innerHTML = slider.value;
 
         slider.oninput = function() {
