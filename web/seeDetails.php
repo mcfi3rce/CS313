@@ -168,21 +168,21 @@ catch (Exception $ex)
       <textarea class="form-control" rows="5" id="comment"></textarea>
       <label for="rating">Rating:</label>
       <div class="slidecontainer">
-      <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-      <p id="demo"></p>
-      <script>
-        var slider = document.getElementById("myRange");
-        var output = document.getElementById("demo");
-        output.innerHTML = slider.value;
+          <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+          <p>Rating: <span id="demo"></span></p>
+          <script>
+            var slider = document.getElementById("myRange");
+            var output = document.getElementById("demo");
+            output.innerHTML = slider.value;
 
-        slider.oninput = function() {
-          output.innerHTML = this.value;
-        }
-        }
-    </script>
+            slider.oninput = function() {
+              output.innerHTML = this.value;
+            }
+            }
+        </script>
     </div>
     <div>
-        <label for="rating">Would Reccommend?:</label>
+        <label for="rating">Would Recommend?:</label>
      <!-- Use an element to toggle between a like/dislike icon -->
     <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
       <script>
