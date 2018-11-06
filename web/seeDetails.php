@@ -165,8 +165,8 @@ catch (Exception $ex)
         <label for="title">Title:</label>
         <input type="text" class="form-control" rows="1" name="title">
       
-        <label for="comment">Review:</label>
-        <textarea class="form-control" form="myform" rows="5" name="comment"></textarea>
+        <label for="review">Review:</label>
+        <textarea class="form-control" form="myform" rows="5" name="review"></textarea>
         
       
         <label for="rating">Rating:</label>

@@ -1,10 +1,21 @@
 <?php
 
-    $title = $_POST['title'];
-    $comment = $_POST['comment'];
-    $rating = $_POST['rating'];
-    $recommend = $_POST['recommend'];
-    $book_id = $_POST['book_id'];
+/**********************************************************
+* File: createReview.php
+* Author: Adam McPherson
+* 
+* Description: This page creates a review of a book.
+***********************************************************/
+
+require("dbConnect.php");
+$db = get_db();
+
+
+$title = $_POST['title'];
+$review = $_POST['review'];
+$rating = $_POST['rating'];
+$recommend = $_POST['recommend'];
+$book_id = $_POST['book_id'];
 
 echo $title . "<br>";
 echo $comment . "<br>";
@@ -28,29 +39,22 @@ try{
 	       review TEXT,
             would_recommend BOOLEAN
         );
-        
         */
             
         
-        $query = 'INSERT INTO public.books_read(user_id, book_id, email, display_name) VALUES (:username, :password, :email, :displayName)';
+        $query = 'INSERT INTO public.books_read (user_id, book_id, rating, review, would_recommend) VALUES (:user_id, :book_id, :rating, :review, :recommend)';
         $statement = $db->prepare($query);
-        $statement->bindValue(':username', $username);
-        $statement->bindValue(':password', $password);
-        $statement->bindValue(':email', $email);
-        $statement->bindValue(':displayName', $displayName);
+        $statement->bindValue(':user_id', $title);
+        $statement->bindValue(':book_id', $book_id);
+        $statement->bindValue(':rating', $rating);
+        $statement->bindValue(':review', $review);
+        $statement->bindValue(':recommend', $recommend);
         
         $statement->execute();
-        
-        #Testing all the data is received correctly
-        /*echo $title . "</br>";
-        echo $author . "</br>";
-        echo $publisher . "</br>";
-        echo $isbn . "</br>";
-        echo $image . "</br>";*/
     } 
     else {
 
-        echo "ERROR sending GET \n";
+        echo "ERROR receiving data from POST \n";
     }
 }
 catch (Exception $ex)
@@ -60,3 +64,6 @@ catch (Exception $ex)
 	echo "Error with DB. Details: $ex";
 	die();
 }
+
+#header("Location: seeDetails.php?book_id=<?php echo book_id;?>");
+die();
