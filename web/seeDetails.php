@@ -54,22 +54,7 @@ catch (Exception $ex)
 try{
     // Get the Data from the GET
     
-    if (isset($_SESSION['user_id'])){
-        $user_id = $_SESSION['user_id'];
-        
-        /*
-        CREATE TABLE public.books_read
-        (
-	       id SERIAL NOT NULL PRIMARY KEY,
-	       user_id INT NOT NULL REFERENCES public.user(id),
-	       book_id INT NOT NULL REFERENCES public.book(id),
-	       rating FLOAT NOT NULL,
-	       review TEXT,
-            would_recommend BOOLEAN
-        );
-        
-        */
-            
+    if (isset($_GET['book_id'])){
         
         $query = 'SELECT display_name, title, review, rating, cover_art 
         FROM public.books_read AS b
