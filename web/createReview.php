@@ -6,10 +6,10 @@
 * 
 * Description: This page creates a review of a book.
 ***********************************************************/
+session_start();
 
 require("dbConnect.php");
 $db = get_db();
-
 
 $title = $_POST['title'];
 $review = $_POST['review'];
@@ -18,7 +18,7 @@ $recommend = $_POST['recommend'];
 $book_id = $_POST['book_id'];
 
 echo $title . "<br>";
-echo $comment . "<br>";
+echo $review . "<br>";
 echo $rating . "<br>";
 echo $recommend . "<br>";
 echo $book_id . "<br>";
@@ -53,7 +53,6 @@ try{
         $statement->execute();
     } 
     else {
-
         echo "ERROR receiving data from POST \n";
     }
 }
@@ -66,4 +65,3 @@ catch (Exception $ex)
 }
 
 #header("Location: seeDetails.php?book_id=<?php echo book_id;?>");
-die();
