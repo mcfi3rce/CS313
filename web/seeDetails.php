@@ -187,7 +187,7 @@ catch (Exception $ex)
       <script>
         function myFunction(x) {
             x.classList.toggle("fa-thumbs-down");
-            console.log(x.value);
+            console.log(x);
         }
     </script>   
     </div>
