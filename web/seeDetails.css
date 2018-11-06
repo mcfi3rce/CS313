@@ -1,8 +1,9 @@
-img {
+#cover {
     float:left;
     width: 150px;
     height: 200px;
 }
+
 .info{
     display:inline;
 }
