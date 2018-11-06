@@ -170,7 +170,8 @@ catch (Exception $ex)
       <div class="slidecontainer">
           <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
           <p>Rating: <span id="demo"></span></p>
-          <script>
+    </div>
+     <script>
             var slider = document.getElementById("myRange");
             var output = document.getElementById("demo");
             output.innerHTML = slider.value;
@@ -179,8 +180,8 @@ catch (Exception $ex)
               output.innerHTML = this.value;
             }
             }
-        </script>
-    </div>
+    </script>
+    
     <div>
         <label for="rating">Would Recommend?:</label>
      <!-- Use an element to toggle between a like/dislike icon -->
