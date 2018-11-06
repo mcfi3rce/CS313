@@ -159,13 +159,13 @@ catch (Exception $ex)
   </div>  
 </div>
 
-<form action="createReview.php" method="post">
+<form action="createReview.php" method="post" id="myform">
     <div class="form-group">
       <label for="title">Title:</label>
       <input type="text" class="form-control" rows="1" name="title">
       
         <label for="comment">Review:</label>
-        <textarea id="comment" class="form-control" rows="5" name="comment"></textarea>
+        <textarea id="comment" class="form-control" form="myform" rows="5" name="comment"></textarea>
       
       <label for="rating">Rating:</label>
       <div class="slidecontainer">
