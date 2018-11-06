@@ -3,10 +3,7 @@ img {
     width: 150px;
     height: 200px;
 }
-h3{
-    display:inline;
-}
-p{
+.info{
     display:inline;
 }
 

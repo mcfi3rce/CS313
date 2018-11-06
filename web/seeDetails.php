@@ -64,7 +64,7 @@ catch (Exception $ex)
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-<div name="book-description">
+<div class="info">
     <img src="<?php echo $image; ?>" class="rounded float-left" alt="...">
     <h3>Title</h3>
     <br>
