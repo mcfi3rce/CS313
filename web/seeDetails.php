@@ -159,20 +159,21 @@ catch (Exception $ex)
   </div>  
 </div>
 
-<form action="createReview.php" method="GET" id="myform">
+<form action="createReview.php" method="POST" id="myform">
     <div class="form-group">
-      <label for="title">Title:</label>
-      <input type="text" class="form-control" rows="1" name="title">
+        <label for="title">Title:</label>
+        <input type="text" class="form-control" rows="1" name="title">
       
         <label for="comment">Review:</label>
-        <textarea id="comment" class="form-control" form="myform" rows="5" name="comment"></textarea>
+        <textarea class="form-control" form="myform" rows="5" name="comment"></textarea>
+        
       
-      <label for="rating">Rating:</label>
-      <div class="slidecontainer">
-          <input type="range" min="1" max="100" value="50" class="slider" name="rating" id="myRange">
+        <label for="rating">Rating:</label>
+        <div class="slidecontainer">
+            <input type="range" min="1" max="100" value="50" class="slider" name="rating" id="myRange">
           <p>Rating: <span id="demo"></span></p>
-    </div>
-     <script>
+        </div>
+        <script>
             var slider = document.getElementById("myRange");
             var output = document.getElementById("demo");
             output.innerHTML = slider.value;
@@ -180,7 +181,7 @@ catch (Exception $ex)
             slider.oninput = function() {
               output.innerHTML = this.value;
             }
-    </script>
+        </script>
     
     <div>
         <label for="recommend">Would Recommend?:</label>
@@ -204,7 +205,6 @@ catch (Exception $ex)
       
     </div>
 </form>
-
 
 </body>
 </html>
