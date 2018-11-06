@@ -30,22 +30,24 @@ try{
         $user_id = $_SESSION['user_id'];
         
         /*
-        CREATE TABLE public.books_read
-        (
+       CREATE TABLE public.books_read
+       (
 	       id SERIAL NOT NULL PRIMARY KEY,
 	       user_id INT NOT NULL REFERENCES public.user(id),
-	       book_id INT NOT NULL REFERENCES public.book(id),
-	       rating FLOAT NOT NULL,
-	       review TEXT,
+            book_id INT NOT NULL REFERENCES public.book(id),
+            title VARCHAR(255) NOT NULL,
+            rating INT NOT NULL,
+            review TEXT,
             would_recommend BOOLEAN
-        );
+            );
         */
             
         
-        $query = 'INSERT INTO public.books_read (user_id, book_id, rating, review, would_recommend) VALUES (:user_id, :book_id, :rating, :review, :recommend)';
+        $query = 'INSERT INTO public.books_read (user_id, book_id, title, rating, review, would_recommend) VALUES (:user_id, :book_id, :rating, :review, :recommend)';
         $statement = $db->prepare($query);
         $statement->bindValue(':user_id', $user_id);
         $statement->bindValue(':book_id', $book_id);
+        $statement->bindValue(':title', $title);
         $statement->bindValue(':rating', $rating);
         $statement->bindValue(':review', $review);
         $statement->bindValue(':recommend', $recommend);
@@ -64,4 +66,4 @@ catch (Exception $ex)
 	die();
 }
 
-#header("Location: seeDetails.php?book_id=<?php echo book_id;?>");
+header("Location: seeDetails.php?book_id=<?php echo book_id;?>");
