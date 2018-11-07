@@ -80,7 +80,6 @@ if (!isset($_SESSION['logged_in'])){
             }
         }
         else {
-            echo "HERE!" . "<br>";
             $query = 'SELECT id, title, author, cover_art FROM book';
             $statement = $db->prepare($query);
             $statement->execute();
