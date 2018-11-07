@@ -99,7 +99,10 @@ catch (Exception $ex)
     </nav>
 
 <div class="info">
-    <img src="<?php echo $image; ?>" class="rounded float-left" alt="..." id="cover">
+   <div class="book-cover">
+       <img src="<?php echo $image; ?>" class="rounded float-left" alt="..." id="cover">
+   </div>
+   <div class="book-info">
     <h3>Title</h3>
     <p><?php echo $title;?></p>
     <h3>Author</h3>
@@ -108,7 +111,8 @@ catch (Exception $ex)
     <p><?php echo $publisher;?></p>
     <h3>ISBN</h3>
     <p><?php echo $isbn;?></p>
-    <br>
+    <br>   
+   </div>
 </div>
 
 <?php
