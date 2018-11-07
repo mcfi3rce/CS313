@@ -64,29 +64,39 @@ if (!isset($_SESSION['logged_in'])){
 <div class="container-fluid">
     <div class="row">        
     <?php
-    if (isset($_POST['search'])){
-        $search = $_POST['search'];
-        
-        $query = "SELECT id, title, author, cover_art FROM book WHERE title like '% :search %'";
-        $statement = db->prepare($query);
-        $statement->bindValue(':search', $search);
-         while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
+    try {
+        if (isset($_POST['search'])){
+            $search = $_POST['search'];
+
+            $query = "SELECT id, title, author, cover_art FROM book WHERE title like '%:search%'";
+            $statement = db->prepare($query);
+            $statement->bindValue(':search', $search);
+            while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
+                    echo "<a href=\"seeDetails.php?book_id=".$row['id']."\">";
+                    echo "<div class='image-block col-sm-2' style='background:" . "url(" . $row["cover_art"] . ") no-repeat center  top;background-size:cover;'>";
+                    echo "<p> See Details</p>";
+                    echo '</div>';
+            }
+        }
+        else {
+            $query = 'SELECT id, title, author, cover_art FROM book';
+            $statement = db->prepare($query);
+
+            while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
                 echo "<a href=\"seeDetails.php?book_id=".$row['id']."\">";
                 echo "<div class='image-block col-sm-2' style='background:" . "url(" . $row["cover_art"] . ") no-repeat center  top;background-size:cover;'>";
-                echo "<p> See Details</p>";
+                echo "<p>See Details</p>";
                 echo '</div>';
             }
-    }
-    else {
-        $query = 'SELECT id, title, author, cover_art FROM book';
-        $statement = db->prepare($query);
-        
-        while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
-            echo "<a href=\"seeDetails.php?book_id=".$row['id']."\">";
-            echo "<div class='image-block col-sm-2' style='background:" . "url(" . $row["cover_art"] . ") no-repeat center  top;background-size:cover;'>";
-            echo "<p>See Details</p>";
-            echo '</div>';
+            
         }
+    }
+    catch (Exception $ex)
+    {
+	// Please be aware that you don't want to output the Exception message in
+	// a production environment
+	echo "Error with DB. Details: $ex";
+	die();
     }
     ?>
     </div>      
