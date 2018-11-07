@@ -94,7 +94,6 @@ try{
         $statement = $db->prepare($query);
         $statement->bindValue(':book_id', $book_id);
         $statement->execute();
-        echo "HERE" . $book_id;
         while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
             echo '<div class="reviews">';
             echo  '<div class="row blockquote review-item">';
@@ -121,7 +120,6 @@ try{
             echo  '</div>' ;  
             echo '</div>';
             }
-        echo "AFTER";
         } 
     else {
 
