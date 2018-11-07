@@ -7,7 +7,6 @@
 .info{
     padding: 12px 22px;
     float:left;
-    clear: right;
 }
 
 body{
@@ -17,7 +16,7 @@ body{
 
 .reviews{
   padding: 12px 22px;
-  max-width: 1120px;
+  max-width: 756px;
   margin: 0 auto;
 }
 
