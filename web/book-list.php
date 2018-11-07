@@ -69,7 +69,7 @@ if (!isset($_SESSION['logged_in'])){
             $search = $_POST['search'];
 
             $query = "SELECT id, title, author, cover_art FROM book WHERE title like '%:search%'";
-            $statement = db->prepare($query);
+            $statement = $db->prepare($query);
             $statement->bindValue(':search', $search);
             while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
                     echo "<a href=\"seeDetails.php?book_id=".$row['id']."\">";
@@ -80,7 +80,7 @@ if (!isset($_SESSION['logged_in'])){
         }
         else {
             $query = 'SELECT id, title, author, cover_art FROM book';
-            $statement = db->prepare($query);
+            $statement = $db->prepare($query);
 
             while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
                 echo "<a href=\"seeDetails.php?book_id=".$row['id']."\">";
