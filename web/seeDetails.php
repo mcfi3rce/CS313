@@ -65,6 +65,33 @@ catch (Exception $ex)
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
+ <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><img src="img/mylogo.png"></a>
+
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Home</a></li>
+                <li><a href="book-list.php">Books</a></li>
+                <?php
+                if ($_SESSION['logged_in']){
+                    echo '<li><a href="logout.php">Logout</a></li>';
+                }
+                else{     
+                    echo '<li><a href="login.php">Login</a></li>';
+                }
+                ?>
+            </ul>    
+        </div>
+        </div> 
+    </nav>
 
 <div class="info">
     <img src="<?php echo $image; ?>" class="rounded float-left" alt="..." id="cover">
