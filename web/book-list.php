@@ -65,8 +65,12 @@ if (!isset($_SESSION['logged_in'])){
     <div class="row">        
     <?php
     if (isset($_POST['search'])){
-        foreach ($db->query("SELECT id, title, author, cover_art FROM book WHERE title like '%" . htmlspecialchars($_POST['search']) . "%'") as $row)
-            {
+        $search = $_POST['search'];
+        
+        $query = "SELECT id, title, author, cover_art FROM book WHERE title like '% :search %'";
+        $statement = db->prepare($query);
+        $statement->bindValue(':search', $search);
+         while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
                 echo "<a href=\"seeDetails.php?book_id=".$row['id']."\">";
                 echo "<div class='image-block col-sm-2' style='background:" . "url(" . $row["cover_art"] . ") no-repeat center  top;background-size:cover;'>";
                 echo "<p> See Details</p>";
@@ -74,7 +78,10 @@ if (!isset($_SESSION['logged_in'])){
             }
     }
     else {
-        foreach ($db->query('SELECT id, title, author, cover_art FROM book') as $row){
+        $query = 'SELECT id, title, author, cover_art FROM book';
+        $statement = db->prepare($query);
+        
+        while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
             echo "<a href=\"seeDetails.php?book_id=".$row['id']."\">";
             echo "<div class='image-block col-sm-2' style='background:" . "url(" . $row["cover_art"] . ") no-repeat center  top;background-size:cover;'>";
             echo "<p>See Details</p>";
