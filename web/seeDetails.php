@@ -8,9 +8,9 @@
 * add a review if logged in.
 ***********************************************************/
 
+session_start();
 require("dbConnect.php");
 $db = get_db();
-
 
 try{
     // Get the Data from the GET
