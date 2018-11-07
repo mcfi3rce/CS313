@@ -108,6 +108,7 @@ catch (Exception $ex)
     <p><?php echo $publisher;?></p>
     <h3>ISBN</h3>
     <p><?php echo $isbn;?></p>
+    <br>
 </div>
 
 <?php
