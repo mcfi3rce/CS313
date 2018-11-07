@@ -76,7 +76,7 @@ if (!isset($_SESSION['logged_in'])){
         </a>
     </div> <!---- END OF SLIDER -->
     
-    <div>
+    <div class="add-books">
       <h1>Add to Our Collection</h1>
        <form action="addTitle.php" method="POST">
            <div class="form-group">
