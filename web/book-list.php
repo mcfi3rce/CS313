@@ -79,9 +79,9 @@ if (!isset($_SESSION['logged_in'])){
             }
         }
         else {
+            echo "HERE!" . "<br>";
             $query = 'SELECT id, title, author, cover_art FROM book';
             $statement = $db->prepare($query);
-
             while ($row = $statement->fetch(PDO::FETCH_ASSOC)){
                 echo "<a href=\"seeDetails.php?book_id=".$row['id']."\">";
                 echo "<div class='image-block col-sm-2' style='background:" . "url(" . $row["cover_art"] . ") no-repeat center  top;background-size:cover;'>";
