@@ -7,6 +7,7 @@
 .info{
     padding: 12px 22px;
     float:left;
+    
 }
 
 body{
@@ -18,6 +19,7 @@ body{
   padding: 12px 22px;
   max-width: 756px;
   margin: 0 auto;
+    clear: left;
 }
 
 .review-item{
@@ -174,4 +176,5 @@ body{
 
 .form-group {
     padding: 12px 22px;
+    clear:left;
 }
