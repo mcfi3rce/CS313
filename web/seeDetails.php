@@ -167,8 +167,10 @@ catch (Exception $ex)
 }
 ?>
 
+
 <form action="createReview.php" method="POST" id="myform">
     <div class="form-group">
+      <h2>Review This Book</h2>
        <input type="hidden" name="book_id" value="<?php echo $book_id;?>">
         <label for="title">Title:</label>
         <input type="text" class="form-control" rows="1" name="title">
