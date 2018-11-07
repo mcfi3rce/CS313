@@ -83,7 +83,7 @@ catch (Exception $ex)
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Home</a></li>
+                <li><a href="index.php">Home</a></li>
                 <li><a href="book-list.php">Books</a></li>
                 <?php
                 if ($_SESSION['logged_in']){
